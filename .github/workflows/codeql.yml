@@ -44,7 +44,7 @@ jobs:
           libssl-dev
 
         # Clone libyang repository from GitHub and checkout the required version
-        git clone --branch v2.1.128 https://github.com/CESNET/libyang.git /tmp/libyang
+        git clone --branch v2.1.128 --single-branch --recurse-submodules https://github.com/CESNET/libyang.git /tmp/libyang
         mkdir /tmp/libyang/build
         cd /tmp/libyang/build  # 进入独立的构建目录
 
