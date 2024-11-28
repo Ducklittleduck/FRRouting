@@ -43,6 +43,8 @@ jobs:
           git \
           libssl-dev
 
+        sudo apt-get install libpcre3-dev libxml2-dev
+
         # Clone the latest libyang repository from GitHub
         git clone --single-branch --recurse-submodules https://github.com/CESNET/libyang.git /tmp/libyang
         cd /tmp/libyang
