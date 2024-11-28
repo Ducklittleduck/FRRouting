@@ -1,0 +1,4246 @@
+{
+  "cli": {
+    "ldp_address_family_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_address_family",
+          "line": 58
+        },
+        "doc": "Configure Address Family and its parameters\nIPv4\nIPv6\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 817
+            },
+            "node": 45
+          }
+        ],
+        "string": "address-family <ipv4|ipv6>$af"
+      }
+    },
+    "ldp_allow_broken_lsps_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_allow_broken_lsps",
+          "line": 228
+        },
+        "doc": "Negate a command or set its defaults\ninstall lsps\nif no remote-label install with imp-null\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 831
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] install allow-broken-lsps"
+      }
+    },
+    "ldp_bridge_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_bridge",
+          "line": 393
+        },
+        "doc": "Negate a command or set its defaults\nBridge interface\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 873
+            },
+            "node": 50
+          }
+        ],
+        "string": "[no] bridge IFNAME$ifname"
+      }
+    },
+    "ldp_clear_mpls_ldp_neighbor_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_clear_mpls_ldp_neighbor",
+          "line": 511
+        },
+        "doc": "Reset functions\nReset MPLS statistical information\nClear LDP state\nClear LDP neighbor sessions\nIPv4 address\nIPv6 address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 886
+            },
+            "node": 3
+          }
+        ],
+        "string": "clear mpls ldp neighbor [<A.B.C.D|X:X::X:X>]$address"
+      }
+    },
+    "ldp_control_word_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_control_word",
+          "line": 457
+        },
+        "doc": "Negate a command or set its defaults\nControl-word options\nExclude control-word in pseudowire packets\nInclude control-word in pseudowire packets\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 880
+            },
+            "node": 51
+          }
+        ],
+        "string": "[no] control-word <exclude|include>$preference"
+      }
+    },
+    "ldp_debug_mpls_ldp_discovery_hello_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_debug_mpls_ldp_discovery_hello",
+          "line": 524
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nMPLS information\nLabel Distribution Protocol\nDiscovery messages\nDiscovery hello message\nReceived messages\nSent messages\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 887
+            },
+            "node": 3
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 812
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] debug mpls ldp discovery hello <recv|sent>$dir"
+      }
+    },
+    "ldp_debug_mpls_ldp_messages_recv_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_debug_mpls_ldp_messages_recv",
+          "line": 555
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nMPLS information\nLabel Distribution Protocol\nMessages\nReceived messages, excluding periodic Keep Alives\nReceived messages, including periodic Keep Alives\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 889
+            },
+            "node": 3
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 814
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] debug mpls ldp messages recv [all]$all"
+      }
+    },
+    "ldp_debug_mpls_ldp_messages_sent_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_debug_mpls_ldp_messages_sent",
+          "line": 569
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nMPLS information\nLabel Distribution Protocol\nMessages\nSent messages, excluding periodic Keep Alives\nSent messages, including periodic Keep Alives\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 890
+            },
+            "node": 3
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 815
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] debug mpls ldp messages sent [all]$all"
+      }
+    },
+    "ldp_debug_mpls_ldp_type_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_debug_mpls_ldp_type",
+          "line": 539
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nMPLS information\nLabel Distribution Protocol\nErrors\nLDP event information\nLDP label allocation information\nLDP sync information\nLDP zebra information\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 888
+            },
+            "node": 3
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 813
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] debug mpls ldp <errors|event|labels|sync|zebra>$type"
+      }
+    },
+    "ldp_discovery_link_holdtime_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_link_holdtime",
+          "line": 89
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nLDP Link Hellos\nHello holdtime\nTime (seconds) - 65535 implies infinite\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 870
+            },
+            "node": 49
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 867
+            },
+            "node": 48
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 850
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 833
+            },
+            "node": 46
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 819
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] discovery hello holdtime (1-65535)$holdtime"
+      }
+    },
+    "ldp_discovery_link_interval_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_link_interval",
+          "line": 113
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nLDP Link Hellos\nHello interval\nTime (seconds)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 871
+            },
+            "node": 49
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 868
+            },
+            "node": 48
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 852
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 835
+            },
+            "node": 46
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 821
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] discovery hello interval (1-65535)$interval"
+      }
+    },
+    "ldp_discovery_targeted_hello_accept_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_targeted_hello_accept",
+          "line": 238
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nLDP Targeted Hellos\nAccept and respond to targeted hellos\nAccess list to specify acceptable targeted hello source\nIP access-list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 854
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 837
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] discovery targeted-hello accept [from ACCESSLIST_NAME$from_acl]"
+      }
+    },
+    "ldp_discovery_targeted_holdtime_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_targeted_holdtime",
+          "line": 101
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nLDP Targeted Hellos\nHello holdtime\nTime (seconds) - 65535 implies infinite\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 851
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 834
+            },
+            "node": 46
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 820
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] discovery targeted-hello holdtime (1-65535)$holdtime"
+      }
+    },
+    "ldp_discovery_targeted_interval_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_targeted_interval",
+          "line": 125
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nLDP Targeted Hellos\nHello interval\nTime (seconds)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 853
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 836
+            },
+            "node": 46
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 822
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] discovery targeted-hello interval (1-65535)$interval"
+      }
+    },
+    "ldp_discovery_transport_address_ipv4_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_transport_address_ipv4",
+          "line": 251
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nSpecify transport address for TCP connection\nIP address to be used as transport address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 838
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] discovery transport-address A.B.C.D$address"
+      }
+    },
+    "ldp_discovery_transport_address_ipv6_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_discovery_transport_address_ipv6",
+          "line": 262
+        },
+        "doc": "Negate a command or set its defaults\nConfigure discovery parameters\nSpecify transport address for TCP connection\nIPv6 address to be used as transport address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 855
+            },
+            "node": 47
+          }
+        ],
+        "string": "[no] discovery transport-address X:X::X:X$address"
+      }
+    },
+    "ldp_dual_stack_cisco_interop_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_dual_stack_cisco_interop",
+          "line": 149
+        },
+        "doc": "Negate a command or set its defaults\nConfigure dual stack parameters\nUse Cisco non-compliant format to send and interpret the Dual-Stack capability TLV\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 824
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] dual-stack cisco-interop"
+      }
+    },
+    "ldp_dual_stack_transport_connection_prefer_ipv4_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_dual_stack_transport_connection_prefer_ipv4",
+          "line": 137
+        },
+        "doc": "Negate a command or set its defaults\nConfigure dual stack parameters\nConfigure TCP transport parameters\nConfigure preferred address family for TCP transport connection with neighbor\nIPv4\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 823
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] dual-stack transport-connection prefer ipv4"
+      }
+    },
+    "ldp_exit_address_family_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_exit_address_family",
+          "line": 79
+        },
+        "doc": "Exit from Address Family configuration mode\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 865
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 848
+            },
+            "node": 46
+          }
+        ],
+        "string": "exit-address-family"
+      }
+    },
+    "ldp_interface_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_interface",
+          "line": 352
+        },
+        "doc": "Enable LDP on an interface and enter interface submode\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 861
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 844
+            },
+            "node": 46
+          }
+        ],
+        "string": "interface IFNAME$ifname"
+      }
+    },
+    "ldp_l2vpn_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_l2vpn",
+          "line": 35
+        },
+        "doc": "Configure l2vpn commands\nL2VPN name\nL2VPN type\nVirtual Private LAN Service\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 810
+            },
+            "node": 4
+          }
+        ],
+        "string": "l2vpn WORD$l2vpn_name type vpls"
+      }
+    },
+    "ldp_label_local_advertise_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_label_local_advertise",
+          "line": 273
+        },
+        "doc": "Negate a command or set its defaults\nConfigure label control and policies\nConfigure local label control and policies\nConfigure outbound label advertisement control\nIP Access-list specifying controls on LDP Peers\nIP access-list name\nIP access-list for destination prefixes\nIP access-list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 856
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 839
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] label local advertise [{to ACCESSLIST_NAME$to_acl|for ACCESSLIST_NAME$for_acl}]"
+      }
+    },
+    "ldp_label_local_advertise_explicit_null_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_label_local_advertise_explicit_null",
+          "line": 288
+        },
+        "doc": "Negate a command or set its defaults\nConfigure label control and policies\nConfigure local label control and policies\nConfigure outbound label advertisement control\nConfigure explicit-null advertisement\nIP access-list for destination prefixes\nIP access-list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 857
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 840
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] label local advertise explicit-null [for ACCESSLIST_NAME$for_acl]"
+      }
+    },
+    "ldp_label_local_allocate_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_label_local_allocate",
+          "line": 302
+        },
+        "doc": "Negate a command or set its defaults\nConfigure label control and policies\nConfigure local label control and policies\nConfigure label allocation control\nallocate local label for host routes only\nIP access-list\nIP access-list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 858
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 841
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] label local allocate <host-routes$host_routes|for ACCESSLIST_NAME$for_acl>"
+      }
+    },
+    "ldp_label_remote_accept_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_label_remote_accept",
+          "line": 316
+        },
+        "doc": "Negate a command or set its defaults\nConfigure label control and policies\nConfigure remote/peer label control and policies\nConfigure inbound label acceptance control\nNeighbor from whom to accept label advertisement\nIP access-list name\nIP access-list for destination prefixes\nIP access-list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 859
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 842
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] label remote accept {from ACCESSLIST_NAME$from_acl|for ACCESSLIST_NAME$for_acl}"
+      }
+    },
+    "ldp_member_interface_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_member_interface",
+          "line": 413
+        },
+        "doc": "Negate a command or set its defaults\nL2VPN member configuration\nLocal interface\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 875
+            },
+            "node": 50
+          }
+        ],
+        "string": "[no] member interface IFNAME$ifname"
+      }
+    },
+    "ldp_member_pseudowire_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_member_pseudowire",
+          "line": 424
+        },
+        "doc": "L2VPN member configuration\nPseudowire interface\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 876
+            },
+            "node": 50
+          }
+        ],
+        "string": "member pseudowire IFNAME$ifname"
+      }
+    },
+    "ldp_mpls_ldp_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_mpls_ldp",
+          "line": 16
+        },
+        "doc": "Global MPLS configuration subcommands\nLabel Distribution Protocol\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 808
+            },
+            "node": 4
+          }
+        ],
+        "string": "mpls ldp"
+      }
+    },
+    "ldp_mtu_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_mtu",
+          "line": 403
+        },
+        "doc": "Negate a command or set its defaults\nSet Maximum Transmission Unit\nMaximum Transmission Unit value\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 874
+            },
+            "node": 50
+          }
+        ],
+        "string": "[no] mtu (1500-9180)$mtu"
+      }
+    },
+    "ldp_neighbor_address_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_address",
+          "line": 468
+        },
+        "doc": "Negate a command or set its defaults\nRemote endpoint configuration\nSpecify the IPv4 or IPv6 address of the remote endpoint\nIPv4 address\nIPv6 address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 881
+            },
+            "node": 51
+          }
+        ],
+        "string": "[no] neighbor address <A.B.C.D|X:X::X:X>$pw_address"
+      }
+    },
+    "ldp_neighbor_ipv4_targeted_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_ipv4_targeted",
+          "line": 371
+        },
+        "doc": "Negate a command or set its defaults\nConfigure neighbor parameters\nIP address of neighbor\nEstablish targeted session\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 847
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] neighbor A.B.C.D$address targeted"
+      }
+    },
+    "ldp_neighbor_ipv6_targeted_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_ipv6_targeted",
+          "line": 382
+        },
+        "doc": "Negate a command or set its defaults\nConfigure neighbor parameters\nIPv6 address of neighbor\nEstablish targeted session\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 864
+            },
+            "node": 47
+          }
+        ],
+        "string": "[no] neighbor X:X::X:X$address targeted"
+      }
+    },
+    "ldp_neighbor_lsr_id_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_lsr_id",
+          "line": 480
+        },
+        "doc": "Negate a command or set its defaults\nRemote endpoint configuration\nSpecify the LSR-ID of the remote endpoint\nIPv4 address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 882
+            },
+            "node": 51
+          }
+        ],
+        "string": "[no] neighbor lsr-id A.B.C.D$address"
+      }
+    },
+    "ldp_neighbor_password_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_password",
+          "line": 159
+        },
+        "doc": "Negate a command or set its defaults\nConfigure neighbor parameters\nLDP Id of neighbor\nConfigure password for MD5 authentication\nThe password\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 825
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] neighbor A.B.C.D$neighbor password WORD$password"
+      }
+    },
+    "ldp_neighbor_session_holdtime_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_session_holdtime",
+          "line": 171
+        },
+        "doc": "Negate a command or set its defaults\nConfigure neighbor parameters\nLDP Id of neighbor\nConfigure session parameters\nConfigure session holdtime\nTime (seconds)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 826
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] neighbor A.B.C.D$neighbor session holdtime (15-65535)$holdtime"
+      }
+    },
+    "ldp_neighbor_ttl_security_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_neighbor_ttl_security",
+          "line": 184
+        },
+        "doc": "Negate a command or set its defaults\nConfigure neighbor parameters\nLDP Id of neighbor\nLDP ttl security check\nDisable ttl security\nIP hops\nmaximum number of hops\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 827
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] neighbor A.B.C.D$neighbor ttl-security <disable|hops (1-254)$hops>"
+      }
+    },
+    "ldp_ordered_control_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_ordered_control",
+          "line": 208
+        },
+        "doc": "Negate a command or set its defaults\nConfigure LDP ordered label distribution control mode\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 829
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] ordered-control"
+      }
+    },
+    "ldp_pw_id_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_pw_id",
+          "line": 491
+        },
+        "doc": "Negate a command or set its defaults\nSet the Virtual Circuit ID\nVirtual Circuit ID value\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 883
+            },
+            "node": 51
+          }
+        ],
+        "string": "[no] pw-id (1-4294967295)$pwid"
+      }
+    },
+    "ldp_pw_status_disable_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_pw_status_disable",
+          "line": 501
+        },
+        "doc": "Negate a command or set its defaults\nConfigure PW status\nDisable PW status\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 884
+            },
+            "node": 51
+          }
+        ],
+        "string": "[no] pw-status disable"
+      }
+    },
+    "ldp_router_id_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_router_id",
+          "line": 198
+        },
+        "doc": "Negate a command or set its defaults\nConfigure router Id\nLSR Id (in form of an IPv4 address)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 828
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] router-id A.B.C.D$address"
+      }
+    },
+    "ldp_session_holdtime_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_session_holdtime",
+          "line": 341
+        },
+        "doc": "Negate a command or set its defaults\nConfigure session parameters\nConfigure session holdtime\nTime (seconds)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 863
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 846
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] session holdtime (15-65535)$holdtime"
+      }
+    },
+    "ldp_show_debugging_mpls_ldp_cmd": {
+      "ldpd/ldpd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_debugging_mpls_ldp",
+          "line": 753
+        },
+        "doc": "Show running system information\nDebugging functions\nMPLS information\nLabel Distribution Protocol\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 900
+            },
+            "node": 1
+          }
+        ],
+        "string": "show debugging [mpls ldp]"
+      }
+    },
+    "ldp_show_l2vpn_atom_binding_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_l2vpn_atom_binding",
+          "line": 702
+        },
+        "doc": "Show running system information\nShow information about Layer2 VPN\nShow Any Transport over MPLS information\nShow AToM label binding information\nDestination address of the VC\nMatch locally assigned label values\nLocally assigned label value\nMatch remotely assigned label values\nRemotely assigned label value\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 898
+            },
+            "node": 1
+          }
+        ],
+        "string": "show l2vpn atom binding\t  [{\t    A.B.C.D$peer\t    |local-label (16-1048575)$local_label\t    |remote-label (16-1048575)$remote_label\t  }]\t [json]$json"
+      }
+    },
+    "ldp_show_l2vpn_atom_vc_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_l2vpn_atom_vc",
+          "line": 730
+        },
+        "doc": "Show running system information\nShow information about Layer2 VPN\nShow Any Transport over MPLS information\nShow AToM virtual circuit information\nDestination address of the VC\nLocal interface of the pseudowire\nInterface's name\nVC ID\nVC ID\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 899
+            },
+            "node": 1
+          }
+        ],
+        "string": "show l2vpn atom vc\t  [{\t    A.B.C.D$peer\t    |interface IFNAME$ifname\t    |vc-id (1-4294967295)$vcid\t  }]\t [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_binding_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_binding",
+          "line": 583
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nIPv4 Address Family\nIPv6 Address Family\nLabel Information Base (LIB) information\nDestination prefix (IPv4)\nDestination prefix (IPv6)\nInclude longer matches\nDisplay labels from LDP neighbor\nNeighbor LSR-ID\nMatch locally assigned label values\nLocally assigned label value\nMatch remotely assigned label values\nRemotely assigned label value\nShow detailed information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 892
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp [<ipv4|ipv6>]$af binding\t  [<A.B.C.D/M|X:X::X:X/M>$prefix [longer-prefixes$longer_prefixes]]\t  [{\t    neighbor A.B.C.D$nbr\t    |local-label (0-1048575)$local_label\t    |remote-label (0-1048575)$remote_label\t  }]\t [detail]$detail [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_capabilities_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_capabilities",
+          "line": 650
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nDisplay LDP Capabilities information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 895
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp capabilities [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_discovery_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_discovery",
+          "line": 621
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nIPv4 Address Family\nIPv6 Address Family\nDiscovery Hello Information\nShow detailed information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 893
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp [<ipv4|ipv6>]$af discovery [detail]$detail [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_igp_sync_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_igp_sync",
+          "line": 690
+        },
+        "doc": "Show mpls ldp ldp-sync information\nMPLS information\nLabel Distribution Protocol\nLDP-IGP Sync information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 901
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp igp-sync [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_interface_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_interface",
+          "line": 636
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nIPv4 Address Family\nIPv6 Address Family\ninterface information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 894
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp [<ipv4|ipv6>]$af interface [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_neighbor_capabilities_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_neighbor_capabilities",
+          "line": 676
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nNeighbor information\nNeighbor LSR-ID\nDisplay neighbor capability information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 897
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp neighbor [A.B.C.D]$lsr_id capabilities [json]$json"
+      }
+    },
+    "ldp_show_mpls_ldp_neighbor_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_show_mpls_ldp_neighbor",
+          "line": 662
+        },
+        "doc": "Show running system information\nMPLS information\nLabel Distribution Protocol\nNeighbor information\nNeighbor LSR-ID\nShow detailed information\nJavaScript Object Notation\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 896
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mpls ldp neighbor [A.B.C.D]$lsr_id [detail]$detail [json]$json"
+      }
+    },
+    "ldp_ttl_security_disable_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_ttl_security_disable",
+          "line": 331
+        },
+        "doc": "Negate a command or set its defaults\nLDP ttl security check\nDisable ttl security\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 860
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 843
+            },
+            "node": 46
+          }
+        ],
+        "string": "[no] ttl-security disable"
+      }
+    },
+    "ldp_vc_type_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_vc_type",
+          "line": 445
+        },
+        "doc": "Negate a command or set its defaults\nVirtual Circuit options\nVirtual Circuit type to use\nEthernet (type 5)\nEthernet-tagged (type 4)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 878
+            },
+            "node": 50
+          }
+        ],
+        "string": "[no] vc type <ethernet|ethernet-tagged>$vc_type"
+      }
+    },
+    "ldp_wait_for_sync_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "ldp_wait_for_sync",
+          "line": 217
+        },
+        "doc": "Negate a command or set its defaults\nTime to wait for LDP-IGP Sync to complete label exchange\nTime (seconds)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 830
+            },
+            "node": 45
+          }
+        ],
+        "string": "[no] wait-for-sync (1-10000)$waitforsync"
+      }
+    },
+    "no_ldp_address_family_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "no_ldp_address_family",
+          "line": 68
+        },
+        "doc": "Negate a command or set its defaults\nConfigure Address Family and its parameters\nIPv4\nIPv6\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 818
+            },
+            "node": 45
+          }
+        ],
+        "string": "no address-family <ipv4|ipv6>$af"
+      }
+    },
+    "no_ldp_interface_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "no_ldp_interface",
+          "line": 361
+        },
+        "doc": "Negate a command or set its defaults\nEnable LDP on an interface and enter interface submode\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 862
+            },
+            "node": 47
+          },
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 845
+            },
+            "node": 46
+          }
+        ],
+        "string": "no interface IFNAME$ifname"
+      }
+    },
+    "no_ldp_l2vpn_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "no_ldp_l2vpn",
+          "line": 46
+        },
+        "doc": "Negate a command or set its defaults\nConfigure l2vpn commands\nL2VPN name\nL2VPN type\nVirtual Private LAN Service\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 811
+            },
+            "node": 4
+          }
+        ],
+        "string": "no l2vpn WORD$l2vpn_name type vpls"
+      }
+    },
+    "no_ldp_member_pseudowire_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "no_ldp_member_pseudowire",
+          "line": 434
+        },
+        "doc": "Negate a command or set its defaults\nL2VPN member configuration\nPseudowire interface\nInterface's name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 877
+            },
+            "node": 50
+          }
+        ],
+        "string": "no member pseudowire IFNAME$ifname"
+      }
+    },
+    "no_ldp_mpls_ldp_cmd": {
+      "ldpd/ldpd": {
+        "defun": {
+          "file": "ldpd/ldp_vty_cmds.c",
+          "func": "no_ldp_mpls_ldp",
+          "line": 25
+        },
+        "doc": "Negate a command or set its defaults\nGlobal MPLS configuration subcommands\nLabel Distribution Protocol\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ldpd/ldp_vty_cmds.c",
+              "func": "ldp_vty_init",
+              "line": 809
+            },
+            "node": 4
+          }
+        ],
+        "string": "no mpls ldp"
+      }
+    }
+  },
+  "refs": {
+    "G2K3B-XFGKT": [
+      {
+        "args": "__func__, &lsr_id, log_hello_src(source)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/adjacency.c",
+        "fmtstring": "%s: lsr-id %pI4, %s",
+        "func": "adj_new",
+        "line": 76,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "G32ZX-ADG0E": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "ldpe_dispatch_main",
+        "line": 584,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "ldpe_dispatch_main",
+        "line": 564,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "ldpe_dispatch_main",
+        "line": 555,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "ldpe_dispatch_main",
+        "line": 545,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "ldpe_dispatch_main",
+        "line": 538,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "G53H5-Q6KPG": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: getsockopt SOL_SOCKET SO_ERROR",
+        "func": "nbr_connect_cb",
+        "line": 549,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "G7CSM-5Q7A8": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error creating socket",
+        "func": "ldp_create_socket",
+        "line": 51,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "G89VD-0S2H5": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error connecting synchronous zclient!",
+        "func": "zclient_sync_init",
+        "line": 2151,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "G8F0E-PFTT6": [
+      {
+        "args": "__func__, access->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "event: %s ACL update filter name %s",
+        "func": "ldp_zebra_filter_update",
+        "line": 663,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "G8RMJ-AWSQJ": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "SIGHUP received",
+        "func": "sighup",
+        "line": 152,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "GDTPK-M64XR": [
+      {
+        "args": "zpw.ifname, (zpw.status == 0) ? \"up\" : \"down\", zpw.status",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: pseudowire %s status %s 0x%x",
+        "func": "ldp_zebra_read_pw_status_update",
+        "line": 605,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GEVS6-JDJKR": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: unicast link hello",
+        "func": "recv_hello",
+        "line": 188,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GKFWP-ZNR7R": [
+      {
+        "args": "zpw->ifname, log_addr(zpw->af, (union ldpd_addr *)&zpw->nexthop), zpw->local_label, zpw->remote_label",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[out]: pseudowire %s nexthop %s labels %u/%u (set)",
+        "func": "kmpw_set",
+        "line": 313,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GMBAC-2QPF8": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error deleting route",
+        "func": "main_dispatch_lde",
+        "line": 675,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "GPSJT-XNZN3": [
+      {
+        "args": "zpw->ifname, log_addr(zpw->af, (union ldpd_addr *)&zpw->nexthop)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[out]: pseudowire %s nexthop %s (del)",
+        "func": "kmpw_del",
+        "line": 304,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GQ1D2-SVVZM": [
+      {
+        "args": "log_addr(kr->af, &kr->prefix), kr->prefixlen, log_addr(kr->af, &kr->nexthop), kr->ifindex, log_label(kr->local_label), log_label(kr->remote_label), (cmd == ZEBRA_MPLS_LABELS_ADD) ? \"add\" : \"delete\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[out]: prefix %s/%u nexthop %s ifindex %u labels %s/%s (%s)",
+        "func": "ldp_zebra_send_mpls_labels",
+        "line": 207,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GSMTH-8SMP7": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4 announced the Unrecognized Notification capability",
+        "func": "recv_init",
+        "line": 169,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GTXW4-AG736": [
+      {
+        "args": "__func__, &nbr->id, (enable) ? \"announced\" : \"withdrew\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4 %s the Typed Wildcard FEC capability",
+        "func": "recv_capability",
+        "line": 304,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GYHZK-R2YVQ": [
+      {
+        "args": "ia->iface->name, af_name(ia->af), holdtime",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "discovery[send]: iface %s (%s) holdtime %u",
+        "func": "send_hello",
+        "line": 135,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H1QXE-XZMBV": [
+      {
+        "args": "&nbr->id, (mac) ? prefix_mac2str((struct ethaddr *)mac, buf, sizeof(buf)) : \"wildcard\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/address.c",
+        "fmtstring": "msg[out]: mac withdrawal: lsr-id %pI4, mac %s",
+        "func": "log_msg_mac_withdrawal",
+        "line": 416,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H3FFQ-4STE4": [
+      {
+        "args": "&nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "msg[out]: initialization: lsr-id %pI4",
+        "func": "send_init",
+        "line": 27,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H688S-FCP9C": [
+      {
+        "args": "__func__, iface->name, ldp_sync_event_names[event], ldp_sync_state_name(old_state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s, event %s not expected in state %s ",
+        "func": "ldp_sync_fsm",
+        "line": 909,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "H87WV-1NEMK": [
+      {
+        "args": "__func__, iface->name, addr",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: error IP_DROP_MEMBERSHIP, interface %s address %pI4",
+        "func": "if_leave_ipv4_group",
+        "line": 585,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "H9SFW-F6YY0": [
+      {
+        "args": "&nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/keepalive.c",
+        "fmtstring": "kalive[in]: keepalive: lsr-id %pI4",
+        "func": "recv_keepalive",
+        "line": 46,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HA13K-0SVTP": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4, sock_set_ipv4_tos error",
+        "func": "nbr_establish_connection",
+        "line": 603,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HA6D4-1HAVN": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: Error getting label chunk!",
+        "func": "lde_get_next_label",
+        "line": 2319,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HANHA-0Q023": [
+      {
+        "args": "__func__, pw->ifname",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/l2vpn.c",
+        "fmtstring": "%s: pseudowire %s: MTU mismatch detected",
+        "func": "l2vpn_pw_ok",
+        "line": 310,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HCJAW-80YRM": [
+      {
+        "args": "__func__, __bswap_16 (ldp_hdr.lspace_id), log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: invalid label space %u, source %s",
+        "func": "disc_recv_packet",
+        "line": 221,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HD2R1-Z7JJT": [
+      {
+        "args": "__func__, log_sockaddr(&su.sa)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: error sending packet to %s",
+        "func": "send_packet",
+        "line": 88,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HDW9P-PTKGM": [
+      {
+        "args": "&nbr->id, status_code_name(nm->status_code)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[out]: notification: lsr-id %pI4, status %s",
+        "func": "log_msg_notification",
+        "line": 370,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HJQMA-Z6XE5": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "nbr_idtimer",
+        "line": 498,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "nbr_itimeout",
+        "line": 468,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "nbr_ktimeout",
+        "line": 442,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "nbr_del",
+        "line": 283,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HK4R6-PRM2R": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "label decision engine exiting",
+        "func": "lde_shutdown",
+        "line": 205,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "HRCBZ-HCARK": [
+      {
+        "args": "__func__, name, ifindex, sync_start",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: interface %s (%d), sync_start=%d",
+        "func": "send_ldp_sync_state_update",
+        "line": 699,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HVHPW-RSBXA": [
+      {
+        "args": "__func__, log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: bad packet size, source %s",
+        "func": "disc_recv_packet",
+        "line": 209,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HYSNJ-81QCS": [
+      {
+        "args": "__func__, path",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: unlink %s",
+        "func": "control_init",
+        "line": 48,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HZEZ2-Z31P3": [
+      {
+        "args": "__func__, zpw->ifname",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/l2vpn.c",
+        "fmtstring": "%s: pseudowire %s not found",
+        "func": "l2vpn_pw_status_update",
+        "line": 517,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HZS7W-1BE43": [
+      {
+        "args": "start, end",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "labels: label chunk assign: %u - %u",
+        "func": "on_get_label_chunk_response",
+        "line": 2241,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "J24B8-BBAPR": [
+      {
+        "args": "__func__, &adj->lsr_id, log_hello_src(&adj->source), af_name(adj_get_af(adj))",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/adjacency.c",
+        "fmtstring": "%s: lsr-id %pI4, %s (%s)",
+        "func": "adj_del",
+        "line": 106,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JFMJA-A6F0R": [
+      {
+        "args": "log_fec(&lw->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "failed to add %s to sent wdraw",
+        "func": "lde_wdraw_add",
+        "line": 1752,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "JGZRD-S5TZQ": [
+      {
+        "args": "ifp->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: interface %s state update",
+        "func": "ldp_interface_status_change",
+        "line": 406,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JNYS6-90HBA": [
+      {
+        "args": "(nm->pw_status == 0) ? \"forwarding\" : \"not forwarding\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[in]: notification:   pw-status %s",
+        "func": "log_msg_notification",
+        "line": 375,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JRQ9G-GV1VV": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error listening on socket",
+        "func": "ldp_create_socket",
+        "line": 170,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "JRQR0-P6WDB": [
+      {
+        "args": "__func__, safe_strerror(errno)",
+        "binary": "ldpd/ldpd",
+        "ec": 100663303,
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: failed to open /dev/null: %s",
+        "func": "start_child",
+        "line": 530,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "JSZK6-NSW9H": [
+      {
+        "args": "__func__, ldp_sync_event_names[event], ldp_sync_action_names[ldp_sync_fsm_tbl[i].action], iface->name, ldp_sync_state_name(old_state), ldp_sync_state_name(iface->ldp_sync.state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: event %s resulted in action %s for interface %s, changing state from %s to %s",
+        "func": "ldp_sync_fsm",
+        "line": 942,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JVDSG-QX51N": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: error while creating socket",
+        "func": "nbr_establish_connection",
+        "line": 577,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "JVNRE-R78NG": [
+      {
+        "args": "__func__, log_sockaddr(&remote_su.sa)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: error while connecting to %s",
+        "func": "nbr_establish_connection",
+        "line": 642,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "JZGN3-8J692": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: read error",
+        "func": "session_read",
+        "line": 410,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K3XQ6-HPVF8": [
+      {
+        "args": "log_fec(&me->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "failed to add %s to recv map",
+        "func": "lde_map_add",
+        "line": 1657,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "K5MG6-MM0TG": [
+      {
+        "args": "__func__, pw->ifname",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/l2vpn.c",
+        "fmtstring": "%s: pseudowire %s: remote end is down",
+        "func": "l2vpn_pw_ok",
+        "line": 319,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "K5NS8-PD5G1": [
+      {
+        "args": "log_map(&nm->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[out]: notification:   fec %s",
+        "func": "log_msg_notification",
+        "line": 373,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "K6416-3MSQY": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4, sock_set_ipv6_dscp error",
+        "func": "nbr_establish_connection",
+        "line": 607,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K8HEX-800E2": [
+      {
+        "args": "__func__, iface->name, log_in6addr(addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: error IPV6_JOIN_GROUP, interface %s address %s",
+        "func": "if_join_ipv6_group",
+        "line": 605,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K96TW-3SMPG": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "failed to send RLFA labels to IGP",
+        "func": "ldp_zebra_send_rlfa_labels",
+        "line": 149,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KDXHE-7EN3R": [
+      {
+        "args": "zpw->ifname, log_addr(zpw->af, (union ldpd_addr *)&zpw->nexthop)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[out]: pseudowire %s nexthop %s (unset)",
+        "func": "kmpw_unset",
+        "line": 323,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KHR2G-8ZRRQ": [
+      {
+        "args": "__func__, tos",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_TOS to 0x%x",
+        "func": "sock_set_ipv4_tos",
+        "line": 308,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KJR9F-NTS7C": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_UNICAST_HOPS",
+        "func": "sock_set_ipv6_ucast_hops",
+        "line": 433,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KJWCX-R92FX": [
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: unexpected imsg %d",
+        "func": "lde_dispatch_parent",
+        "line": 672,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: unexpected imsg %d",
+        "func": "lde_dispatch_imsg",
+        "line": 394,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KP3N6-ZMGDF": [
+      {
+        "args": "zpw->ifname, log_addr(zpw->af, (union ldpd_addr *)&zpw->nexthop)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[out]: pseudowire %s nexthop %s (add)",
+        "func": "kmpw_add",
+        "line": 295,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KRB0T-8NDAB": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "recv_capability",
+        "line": 256,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "send_capability",
+        "line": 208,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KY14R-2K6X6": [
+      {
+        "args": "__func__, iface->name, log_in6addr(addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s addr %s",
+        "func": "if_leave_ipv6_group",
+        "line": 618,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, iface->name, log_in6addr(addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s addr %s",
+        "func": "if_join_ipv6_group",
+        "line": 597,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KYKZN-S6FF3": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error getting first label chunk!",
+        "func": "lde_label_list_init",
+        "line": 2231,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "KZGVA-XFNKP": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_MULTICAST_LOOP",
+        "func": "sock_set_ipv6_mcast_loop",
+        "line": 472,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "M2VXK-A66NP": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: failed to decode params",
+        "func": "recv_hello",
+        "line": 174,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "M8VG3-ZYDVZ": [
+      {
+        "args": "__func__, &nbr->id, (enable) ? \"announced\" : \"withdrew\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4 %s the Unrecognized Notification capability",
+        "func": "recv_capability",
+        "line": 326,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MAW19-09DDX": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting SO_REUSEADDR",
+        "func": "sock_set_reuse",
+        "line": 232,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MCGH6-3NXE8": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error adding pseudowire",
+        "func": "main_dispatch_lde",
+        "line": 688,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MDBCZ-CEYX1": [
+      {
+        "args": "__func__, iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_MULTICAST_IF, interface %s",
+        "func": "sock_set_ipv4_mcast",
+        "line": 386,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "ME9CF-7AVQH": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: Error releasing label chunk!",
+        "func": "lde_free_label",
+        "line": 2274,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MFQD2-E7G39": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error getting label chunk!",
+        "func": "lde_get_label_chunk",
+        "line": 2214,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MHEQ5-FS4CK": [
+      {
+        "args": "__func__, fd",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: fd %d: not found",
+        "func": "control_dispatch_imsg",
+        "line": 189,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, fd",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: fd %d: not found",
+        "func": "control_close",
+        "line": 165,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MNV5F-N9314": [
+      {
+        "args": "64",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "labels: getting label chunk (size %u)",
+        "func": "lde_get_label_chunk",
+        "line": 2210,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MPEB9-KK9WX": [
+      {
+        "args": "__func__, ctl_sock_path",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "%s: connect: %s",
+        "func": "ldp_vty_connect",
+        "line": 1493,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MRCZT-EKS02": [
+      {
+        "args": "__func__, log_sockaddr(sin6), __bswap_16 (tmp16)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/util.c",
+        "fmtstring": "%s: address %s already has embedded scope %u",
+        "func": "embedscope",
+        "line": 251,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MRJQM-RYCC1": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/accept.c",
+        "fmtstring": "accept_pause",
+        "func": "accept_pause",
+        "line": 74,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MRRK0-DTGKP": [
+      {
+        "args": "__func__, ttl",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_MULTICAST_TTL to %d",
+        "func": "sock_set_ipv4_mcast_ttl",
+        "line": 342,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MSR1Q-TSH30": [
+      {
+        "args": "&nbr->id, status_code_name(nm->status_code)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[in]: notification: lsr-id %pI4, status %s",
+        "func": "log_msg_notification",
+        "line": 370,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MV0V4-Q97T9": [
+      {
+        "args": "__func__, fd",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/accept.c",
+        "fmtstring": "%s: %d removed from queue",
+        "func": "accept_del",
+        "line": 63,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MXPPW-JW1VA": [
+      {
+        "args": "__func__, log_sockaddr(sin6), sin6->sin6_scope_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/util.c",
+        "fmtstring": "%s: address %s already has scope id %u",
+        "func": "addscope",
+        "line": 281,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, log_sockaddr(sin6), sin6->sin6_scope_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/util.c",
+        "fmtstring": "%s: address %s already has scope id %u",
+        "func": "recoverscope",
+        "line": 266,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "MZ79N-4HD0B": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: cannot find neighbor",
+        "func": "ldpe_dispatch_lde",
+        "line": 725,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: cannot find neighbor",
+        "func": "ldpe_dispatch_lde",
+        "line": 705,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N28ES-GWC45": [
+      {
+        "args": "log_hello_src(&source), &lsr_id, log_addr(af, &trans_addr), holdtime, (ds_tlv) ? \" (dual stack TLV present)\" : \"\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "discovery[recv]: %s lsr-id %pI4 transport-address %s holdtime %u%s",
+        "func": "recv_hello",
+        "line": 283,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N31PD-2NYJS": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error changing route",
+        "func": "main_dispatch_lde",
+        "line": 668,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "N637S-GQ2F6": [
+      {
+        "args": "__func__, log_fec(&fn->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "event: %s: FEC %s: scheduling to send label mapping later (waiting for pending label release)",
+        "func": "lde_send_labelmapping",
+        "line": 1033,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NG90Y-4HPD9": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: unknown LDP message from nbr %pI4",
+        "func": "session_read",
+        "line": 529,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NGHRK-0J470": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: listen",
+        "func": "control_listen",
+        "line": 78,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "NPA6T-XAZF7": [
+      {
+        "args": "log_addr(ka.af, &ka.addr), ka.prefixlen, ifp->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: address delete %s/%u interface %s",
+        "func": "ldp_interface_address_delete",
+        "line": 482,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NPAQ3-509XS": [
+      {
+        "args": "__func__, fd",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/accept.c",
+        "fmtstring": "%s: accepting on fd %d",
+        "func": "accept_add",
+        "line": 51,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NPWXH-43WY2": [
+      {
+        "args": "__func__, ia->iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: error setting multicast interface, %s",
+        "func": "send_packet",
+        "line": 77,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, ia->iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: error setting multicast interface, %s",
+        "func": "send_packet",
+        "line": 68,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NQ6RS-GW0KS": [
+      {
+        "args": "iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "update labels for interface %s",
+        "func": "lde_route_update",
+        "line": 2353,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NWXXY-417HT": [
+      {
+        "args": "__func__, iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s",
+        "func": "ldpe_if_exit",
+        "line": 101,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s",
+        "func": "ldpe_if_init",
+        "line": 78,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P1XB7-KP5PZ": [
+      {
+        "args": "log_addr(tnbr->af, &tnbr->addr), af_name(tnbr->af), holdtime",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "discovery[send]: targeted-neighbor %s (%s) holdtime %u",
+        "func": "send_hello",
+        "line": 139,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P8HR1-E5DC4": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "ldp engine exiting",
+        "func": "ldpe_shutdown",
+        "line": 234,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "PJ96F-50W8A": [
+      {
+        "args": "__func__, strerror((*__errno_location ()))",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: accept error: %s",
+        "func": "session_accept",
+        "line": 311,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PP68W-9K9GR": [
+      {
+        "args": "__func__, strerror((*__errno_location ()))",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: read error: %s",
+        "func": "disc_recv_packet",
+        "line": 146,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PSBK9-ENWK2": [
+      {
+        "args": "log_map(&nm->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[in]: notification:   fec %s",
+        "func": "log_msg_notification",
+        "line": 373,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PTQ6E-FYXWF": [
+      {
+        "args": "ifp->name, ifp->ifindex, ifp->mtu",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: interface delete %s index %d mtu %d",
+        "func": "ldp_ifp_destroy",
+        "line": 390,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PZ14A-44P4T": [
+      {
+        "args": "__func__, log_fec(&fn->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde_lib.c",
+        "fmtstring": "%s: fec %s upstream list not empty",
+        "func": "fec_free",
+        "line": 228,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Q0KCV-2SJ97": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error deleting pseudowire",
+        "func": "main_dispatch_lde",
+        "line": 692,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Q1P51-38B20": [
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error handling imsg %d",
+        "func": "main_dispatch_lde",
+        "line": 720,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error handling imsg %d",
+        "func": "main_dispatch_ldpe",
+        "line": 616,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q2J2G-J7AKQ": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "main_dispatch_lde",
+        "line": 713,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Q2YPK-RPWE1": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "SIGINT received",
+        "func": "sigint",
+        "line": 167,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "Q335R-W1DXY": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_TTL",
+        "func": "sock_set_ipv4_ucast_ttl",
+        "line": 331,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "Q5WSH-HG4QB": [
+      {
+        "args": "msg_name(msg_type), &nbr->id, log_map(map), log_label(map->label)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/labelmapping.c",
+        "fmtstring": "msg[out]: %s: lsr-id %pI4, fec %s, label %s",
+        "func": "log_msg_mapping",
+        "line": 864,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q69AR-AZ763": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/accept.c",
+        "fmtstring": "accept_timeout",
+        "func": "accept_timeout",
+        "line": 117,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q6PRY-HFFKE": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_MULTICAST_HOPS",
+        "func": "sock_set_ipv6_mcast_hops",
+        "line": 445,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "Q77FH-38VCN": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4 announced the Typed Wildcard FEC capability",
+        "func": "recv_init",
+        "line": 153,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QAMFF-X60C5": [
+      {
+        "args": "log_fec(&me->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "failed to add %s to sent map",
+        "func": "lde_map_add",
+        "line": 1651,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QB7HF-DAK3T": [
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: error handling imsg %d",
+        "func": "control_dispatch_imsg",
+        "line": 254,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QDXJ4-XZFX8": [
+      {
+        "args": "msg_name(msg_type), &nbr->id, log_addr(af, addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/address.c",
+        "fmtstring": "msg[out]: %s: lsr-id %pI4, address %s",
+        "func": "log_msg_address",
+        "line": 407,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QQK8E-QNNA8": [
+      {
+        "args": "__func__, &nbr->id, nbr_event_names[event], nbr_state_name(old_state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4, event %s not expected in state %s",
+        "func": "nbr_fsm",
+        "line": 136,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QWREA-3QWWF": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: closing session with lsr-id %pI4",
+        "func": "session_close",
+        "line": 654,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QXXAY-VNTZP": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error setting pseudowire",
+        "func": "main_dispatch_lde",
+        "line": 696,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QYQ86-Q6TK5": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "%s: lsr-id %pI4 announced the Dynamic Capability Announcement capability",
+        "func": "recv_init",
+        "line": 136,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "R199H-5CEWN": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "terminating",
+        "func": "ldpd_shutdown",
+        "line": 497,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "R45JA-0R81K": [
+      {
+        "args": "__func__, &lsr_id, log_addr(af, &trans_addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: invalid targeted hello transport address %s",
+        "func": "recv_hello",
+        "line": 226,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "R46S3-W8FXM": [
+      {
+        "args": "__func__, ldp_sync_event_names[event], iface->name, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: event %s, iface %s, lsr-id %pI4",
+        "func": "ldp_sync_fsm_nbr_event",
+        "line": 837,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "R92YM-TCQ3B": [
+      {
+        "args": "msg_name(msg_type), &nbr->id, log_map(map), log_label(map->label)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/labelmapping.c",
+        "fmtstring": "msg[in]: %s: lsr-id %pI4, fec %s, label %s",
+        "func": "log_msg_mapping",
+        "line": 864,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RK8E0-H7YWG": [
+      {
+        "args": "ifp->name, ifp->ifindex, ifp->mtu",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: interface add %s index %d mtu %d",
+        "func": "ldp_ifp_create",
+        "line": 376,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RKW79-X53A8": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "lde_dispatch_parent",
+        "line": 657,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "lde_dispatch_parent",
+        "line": 638,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "lde_dispatch_parent",
+        "line": 626,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "lde_dispatch_parent",
+        "line": 618,
+        "priority": 3,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: wrong imsg len",
+        "func": "lde_dispatch_parent",
+        "line": 486,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RQ083-JZYHV": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: chmod",
+        "func": "control_init",
+        "line": 63,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "RSTQ1-X21GP": [
+      {
+        "args": "&nbr->id, status_code_name(nm->status_code)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[out]: notification: lsr-id %pI4, status %s (fatal error)",
+        "func": "log_msg_notification",
+        "line": 365,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RV3KC-EJVFK": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: accept",
+        "func": "control_accept",
+        "line": 111,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "RVNGX-9CG3P": [
+      {
+        "args": "__func__, fd, safe_strerror(save_errno)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: can't set TCP_MD5SIG option on fd %d: %s",
+        "func": "sock_set_md5sig",
+        "line": 297,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RWMMT-P830Y": [
+      {
+        "args": "log_addr(ka.af, &ka.addr), ka.prefixlen, ifp->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: address add %s/%u interface %s",
+        "func": "ldp_interface_address_add",
+        "line": 454,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RXSBZ-8R7B6": [
+      {
+        "args": "(add) ? \"add\" : \"delete\", log_addr(kr.af, &kr.prefix), kr.prefixlen, zebra_route_string(api.type)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: route %s %s/%d (%s)",
+        "func": "ldp_zebra_read_route",
+        "line": 541,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "S10CM-63EVD": [
+      {
+        "args": "log_fec(map)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "failed to add %s to sent map (pending)",
+        "func": "lde_map_pending_add",
+        "line": 1694,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "S587J-FCF9X": [
+      {
+        "args": "__func__, iface->name, addr",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s addr %pI4",
+        "func": "if_leave_ipv4_group",
+        "line": 579,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, iface->name, addr",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: interface %s addr %pI4",
+        "func": "if_join_ipv4_group",
+        "line": 561,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "S7HBY-JYB4F": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error connecting to label manager!",
+        "func": "zclient_sync_init",
+        "line": 2165,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "S7KG0-YA091": [
+      {
+        "args": "__func__, iface->name, log_in6addr(addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: error IPV6_LEAVE_GROUP, interface %s address %s",
+        "func": "if_leave_ipv6_group",
+        "line": 626,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "S8XV5-9JMDA": [
+      {
+        "args": "__func__, ldp_sync_event_names[event], ldp_sync_action_names[ldp_sync_fsm_tbl[i].action], iface->name, ldp_sync_state_name(iface->ldp_sync.state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: event %s resulted in action %s for interface %s, remaining in state %s",
+        "func": "ldp_sync_fsm",
+        "line": 950,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "S99M8-NB8XE": [
+      {
+        "args": "__func__, &id, log_addr(af, addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: lsr-id %pI4 transport-address %s",
+        "func": "nbr_new",
+        "line": 217,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "S9Y4Z-FF9J3": [
+      {
+        "args": "log_fec(&lre->fec), sent ? \"sent\" : \"recv\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "failed to add %s to %s req",
+        "func": "lde_req_add",
+        "line": 1719,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "SKK75-SJX5M": [
+      {
+        "args": "(nm->pw_status == 0) ? \"forwarding\" : \"not forwarding\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[out]: notification:   pw-status %s",
+        "func": "log_msg_notification",
+        "line": 375,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SKMP8-5DYH7": [
+      {
+        "args": "&nbr->id, status_code_name(nm->status_code)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/notification.c",
+        "fmtstring": "msg[in]: notification: lsr-id %pI4, status %s (fatal error)",
+        "func": "log_msg_notification",
+        "line": 365,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SXGCG-3XX33": [
+      {
+        "args": "__func__, __bswap_16 (ldp_hdr.version), log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: invalid LDP version %d, source %s",
+        "func": "disc_recv_packet",
+        "line": 216,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SYG0F-V3D55": [
+      {
+        "args": "msg_name(msg_type), &nbr->id, log_addr(af, addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/address.c",
+        "fmtstring": "msg[in]: %s: lsr-id %pI4, address %s",
+        "func": "log_msg_address",
+        "line": 407,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "T3X6X-5WGBR": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/accept.c",
+        "fmtstring": "accept_unpause",
+        "func": "accept_unpause",
+        "line": 83,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "T55G6-RH5B1": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: getsockname",
+        "func": "tcp_new",
+        "line": 715,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "TAGXR-AB0XR": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error sending hello for synchronous zclient!",
+        "func": "zclient_sync_init",
+        "line": 2159,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "TCRN4-90K18": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: unexpected data in message",
+        "func": "recv_hello",
+        "line": 202,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TDPT2-SAEDC": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "imsg_read error",
+        "func": "ldp_vty_dispatch",
+        "line": 1806,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "TJZX8-P3EB9": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_RECVPKTINFO",
+        "func": "sock_set_ipv6_pktinfo",
+        "line": 415,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "TSJTC-MPYG5": [
+      {
+        "args": "__func__, log_addr(lde_addr->af, &lde_addr->addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot delete address %s, it does not exist",
+        "func": "lde_dispatch_imsg",
+        "line": 336,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TZH0Y-VEGRF": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: error unsetting pseudowire",
+        "func": "main_dispatch_lde",
+        "line": 700,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "V6MME-8EC70": [
+      {
+        "args": "__func__, iface->name, iface->ifindex, ldp_sync_state_name(old_state), ldp_sync_state_name(iface->ldp_sync.state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: resulted in changing state for interface %s (%d) from %s to %s",
+        "func": "ldp_sync_fsm_init",
+        "line": 882,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V7WA1-4Y8WJ": [
+      {
+        "args": "__func__, log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: unknown LDP packet type, source %s",
+        "func": "disc_recv_packet",
+        "line": 261,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V9XTP-SJFE6": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_FREEBIND",
+        "func": "sock_set_bindany",
+        "line": 252,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VF8XE-66NG5": [
+      {
+        "args": "__func__, path",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: bind: %s",
+        "func": "control_init",
+        "line": 55,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VFRDV-X7XBQ": [
+      {
+        "args": "__func__, log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: invalid source address: %s",
+        "func": "disc_recv_packet",
+        "line": 194,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VFX4Q-N0Q6T": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error releasing label chunk!",
+        "func": "lde_release_label_chunk",
+        "line": 2198,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VJBYS-63C7J": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: expected to receive imsg fd to lde but didn't receive any",
+        "func": "ldpe_dispatch_main",
+        "line": 359,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VKDJX-1YF87": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: received unexpected imsg fd to ldpe",
+        "func": "lde_dispatch_parent",
+        "line": 519,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VNMJG-0XHB3": [
+      {
+        "args": "__func__, log_addr(lde_addr->af, &lde_addr->addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot add address %s, it already exists",
+        "func": "lde_dispatch_imsg",
+        "line": 320,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VPKVX-T7SZG": [
+      {
+        "args": "start, end",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "Error trying to allocate label chunk %u - %u",
+        "func": "on_get_label_chunk_response",
+        "line": 2245,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VYKT2-HVZZB": [
+      {
+        "args": "__func__, &lsr_id, holdtime",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: invalid hello holdtime (%u)",
+        "func": "recv_hello",
+        "line": 179,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VZB6Q-R1YQ5": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "%s: socket",
+        "func": "control_init",
+        "line": 37,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "W55P5-AGNTQ": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: hello packet advertising a different transport address",
+        "func": "recv_hello",
+        "line": 346,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "W6PMN-8Z5Z9": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: expected to receive imsg fd to ldpe but didn't receive any",
+        "func": "lde_dispatch_parent",
+        "line": 523,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "WAA5M-DVAW7": [
+      {
+        "args": "__func__, log_addr(nbr->af, &nbr->raddr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: neighbor %s manually cleared",
+        "func": "nbr_clear_ctl",
+        "line": 854,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WBTVA-809CY": [
+      {
+        "args": "want_register ? \"Register\" : \"De-register\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "%s to receive default VRF information",
+        "func": "ldp_zebra_regdereg_zebra_info",
+        "line": 619,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WBVPV-VPZK4": [
+      {
+        "args": "__func__, nbr_event_names[event], nbr_action_names[nbr_fsm_tbl[i].action], &nbr->id, nbr_state_name(old_state), nbr_state_name(nbr->state)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: event %s resulted in action %s and changing state for lsr-id %pI4 from %s to %s",
+        "func": "nbr_fsm",
+        "line": 145,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WDKBD-ZY4KK": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: multicast targeted hello",
+        "func": "recv_hello",
+        "line": 184,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WHSZ6-8EKEC": [
+      {
+        "args": "&router_id.u.prefix4",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: router-id update %pI4",
+        "func": "ldp_router_id_update",
+        "line": 362,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WJJAJ-V9KH0": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "imsg_get error",
+        "func": "ldp_vty_dispatch",
+        "line": 1818,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "WS3J8-P3H7R": [
+      {
+        "args": "__func__, count",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde_lib.c",
+        "fmtstring": "%s: %u entries removed",
+        "func": "lde_gc_timer",
+        "line": 1039,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WS7R4-SB2NT": [
+      {
+        "args": "__func__, log_sockaddr(&local_su.sa)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: error while binding socket to %s",
+        "func": "nbr_establish_connection",
+        "line": 617,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "WZ6YN-7QFPZ": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/control.c",
+        "fmtstring": "control_accept",
+        "func": "control_accept",
+        "line": 117,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "X1G75-45KJ1": [
+      {
+        "args": "__func__, ldp_sync_event_names[event], adj->source.link.ia->iface->name, adj->source.link.ia->iface->ifindex, &adj->lsr_id, log_addr(adj_get_af(adj), &adj->source.link.src_addr), log_addr(adj_get_af(adj), &adj->trans_addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: event %s, adj iface %s (%d) lsr-id %pI4 source address %s transport address %s",
+        "func": "ldp_sync_fsm_adj_event",
+        "line": 803,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X2VTC-5SQ72": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: failed to decode optional params",
+        "func": "recv_hello",
+        "line": 197,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X4CRR-5RYY2": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: lsr-id %pI4: rejecting additional transport connection",
+        "func": "session_accept",
+        "line": 349,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X4TMJ-WCBRH": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: connection closed by remote end",
+        "func": "session_read",
+        "line": 419,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X78QK-BA80T": [
+      {
+        "args": "__func__, iface->name, addr",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: error IP_ADD_MEMBERSHIP, interface %s address %pI4",
+        "func": "if_join_ipv4_group",
+        "line": 567,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "X7K9P-QWV0J": [
+      {
+        "args": "__func__, socket_name(type), af_name(af)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: failed to create %s socket for address-family %s",
+        "func": "main_imsg_send_net_socket",
+        "line": 890,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X9J4N-6V1TP": [
+      {
+        "args": "__func__, state_req->name, state_req->ifindex",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: Warning: Ignoring LDP IGP SYNC interface state request for interface %s (%d).  Interface does not exist in LDP.",
+        "func": "ldp_sync_fsm_state_req",
+        "line": 857,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XCRSN-VN05S": [
+      {
+        "args": "__func__, log_addr(pconn->af, &pconn->addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: no adjacency with remote end: %s",
+        "func": "pending_conn_timeout",
+        "line": 790,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XFSAK-2AJZ7": [
+      {
+        "args": "log_fec(&fn->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde_lib.c",
+        "fmtstring": "failed to add %s to ft tree",
+        "func": "fec_add",
+        "line": 259,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "XPC7K-9Z567": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "pipe closed",
+        "func": "ldp_vty_dispatch",
+        "line": 1811,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "XSQP9-RZ0SD": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "%s: socket",
+        "func": "ldp_vty_connect",
+        "line": 1485,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "XWZ1V-ZXG8D": [
+      {
+        "args": "&nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/keepalive.c",
+        "fmtstring": "kalive[out]: keepalive: lsr-id %pI4",
+        "func": "send_keepalive",
+        "line": 29,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Y0HEY-2MQQN": [
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: error handling imsg %d",
+        "func": "ldpe_dispatch_lde",
+        "line": 733,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, imsg.hdr.type",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: error handling imsg %d",
+        "func": "ldpe_dispatch_main",
+        "line": 600,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Y3TMK-YVP7M": [
+      {
+        "args": "__func__, state_req->name, state_req->ifindex, zebra_route_string(state_req->proto)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "sync: %s: interface %s (%d) proto %s",
+        "func": "ldp_sync_fsm_state_req",
+        "line": 850,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Y87VZ-5MXM3": [
+      {
+        "args": "(add) ? \"add\" : \"delete\", log_addr(kr.af, &kr.prefix), kr.prefixlen, log_addr(kr.af, &kr.nexthop), kr.ifindex, zebra_route_string(api.type)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_zebra.c",
+        "fmtstring": "zebra[in]: route %s %s/%d nexthop %s ifindex %u (%s)",
+        "func": "ldp_zebra_read_route",
+        "line": 581,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Y9Q6Z-VJ6BX": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_TCLASS",
+        "func": "sock_set_ipv6_dscp",
+        "line": 404,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "YBWYD-YWYGC": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot find lde neighbor",
+        "func": "lde_dispatch_imsg",
+        "line": 347,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot find lde neighbor",
+        "func": "lde_dispatch_imsg",
+        "line": 331,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot find lde neighbor",
+        "func": "lde_dispatch_imsg",
+        "line": 315,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot find lde neighbor",
+        "func": "lde_dispatch_imsg",
+        "line": 286,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: cannot find lde neighbor",
+        "func": "lde_dispatch_imsg",
+        "line": 269,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YDSG8-APMMA": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "%s: error updating PW status",
+        "func": "lde_dispatch_parent",
+        "line": 481,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YK53V-15AP9": [
+      {
+        "args": "af == 2 ? \"ipv4\" : \"ipv6\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "release all labels for address family %s",
+        "func": "lde_route_update_release_all",
+        "line": 2475,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YMGRR-CNPQ8": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: targeted hello with link-local source address",
+        "func": "recv_hello",
+        "line": 241,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YPZWJ-054EX": [
+      {
+        "args": "__func__, log_fec(f)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde_lib.c",
+        "fmtstring": "%s failed for %s",
+        "func": "fec_remove",
+        "line": 107,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YQWHP-KAZGK": [
+      {
+        "args": "__func__, name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s: failed to load %s",
+        "func": "ldp_load_module",
+        "line": 98,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YTQ3D-XZQCF": [
+      {
+        "args": "__func__, __bswap_16 (msg.length), log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: invalid LDP message length %u, source %s",
+        "func": "disc_recv_packet",
+        "line": 248,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YW88B-ZD40S": [
+      {
+        "args": "__func__, &lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: remote transport preference does not match the local preference",
+        "func": "recv_hello",
+        "line": 309,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YZM8C-722EK": [
+      {
+        "args": "__func__, iface->name",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IPV6_MULTICAST_IF, interface %s",
+        "func": "sock_set_ipv6_mcast",
+        "line": 457,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "Z0FKE-XQM2X": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error setting IP_PKTINFO",
+        "func": "sock_set_ipv4_pktinfo",
+        "line": 355,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "Z15JE-15QTV": [
+      {
+        "args": "__func__, safe_strerror((*__errno_location ()))",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/socket.c",
+        "fmtstring": "%s: error binding socket: %s",
+        "func": "ldp_create_socket",
+        "line": 78,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Z7GCH-1FDAK": [
+      {
+        "args": "__func__, &lsr_id, log_addr(af, &trans_addr)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: lsr-id %pI4: invalid transport address %s",
+        "func": "recv_hello",
+        "line": 212,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Z9RKS-TMMXY": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "write error",
+        "func": "ldp_vty_clear_nbr",
+        "line": 2137,
+        "priority": 4,
+        "type": "logmsg"
+      },
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldp_vty_exec.c",
+        "fmtstring": "write error",
+        "func": "ldp_vty_dispatch",
+        "line": 1796,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "ZA0W4-SKC38": [
+      {
+        "args": "(pid == lde_pid ? \"label decision engine\" : \"ldp engine\"), ((status) & 0x7f)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "%s terminated; signal %d",
+        "func": "ldpd_shutdown",
+        "line": 486,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZAFXP-Y8BV7": [
+      {
+        "args": "__func__, __bswap_16 (ldp_hdr.length), log_addr(af, &src)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: invalid LDP packet length %u, source %s",
+        "func": "disc_recv_packet",
+        "line": 229,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZAGVA-47W2B": [
+      {
+        "args": "__func__, &adj->lsr_id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/adjacency.c",
+        "fmtstring": "%s: lsr-id %pI4",
+        "func": "adj_itimer",
+        "line": 170,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZAYD9-G46SN": [
+      {
+        "args": "__func__, &nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: error enabling GTSM for lsr-id %pI4",
+        "func": "nbr_gtsm_check",
+        "line": 741,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZCBC7-S6E2Y": [
+      {
+        "args": "__func__, pw->ifname",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/l2vpn.c",
+        "fmtstring": "%s: pseudowire %s: no remote label",
+        "func": "l2vpn_pw_ok",
+        "line": 303,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZDSG7-04ZJE": [
+      {
+        "args": "__func__, log_addr(nbr->af, &nbr->raddr), strerror((*__errno_location ()))",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/neighbor.c",
+        "fmtstring": "%s: error while connecting to %s: %s",
+        "func": "nbr_connect_cb",
+        "line": 556,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZE57P-ZD5EB": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/packet.c",
+        "fmtstring": "%s: getpeername",
+        "func": "tcp_new",
+        "line": 719,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "ZH28R-6WPH1": [
+      {
+        "args": "__func__",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpe.c",
+        "fmtstring": "%s: received unexpected imsg fd to lde",
+        "func": "ldpe_dispatch_main",
+        "line": 355,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZM45K-Z4YQS": [
+      {
+        "args": "",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/ldpd.c",
+        "fmtstring": "waiting for children to terminate",
+        "func": "ldpd_shutdown",
+        "line": 466,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZM8R3-SDQ91": [
+      {
+        "args": "&nbr->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/init.c",
+        "fmtstring": "msg[in]: initialization: lsr-id %pI4",
+        "func": "recv_init",
+        "line": 57,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZMGPG-B2QP6": [
+      {
+        "args": "__func__, log_addr(af, &trans_addr), &nbrt->id",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/hello.c",
+        "fmtstring": "%s: transport address %s is already being used by lsr-id %pI4",
+        "func": "recv_hello",
+        "line": 354,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZV06V-V9TCK": [
+      {
+        "args": "__func__, iface->name, af_name(af)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: %s address-family %s",
+        "func": "if_reset",
+        "line": 311,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, iface->name, af_name(af)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/interface.c",
+        "fmtstring": "%s: %s address-family %s",
+        "func": "if_start",
+        "line": 278,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZX1TK-82RJH": [
+      {
+        "args": "&nbr->id, (mac) ? prefix_mac2str((struct ethaddr *)mac, buf, sizeof(buf)) : \"wildcard\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/address.c",
+        "fmtstring": "msg[in]: mac withdrawal: lsr-id %pI4, mac %s",
+        "func": "log_msg_mac_withdrawal",
+        "line": 416,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZYT8J-JZE75": [
+      {
+        "args": "iface->name, af == 2 ? \"ipv4\" : \"ipv6\"",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde.c",
+        "fmtstring": "release all labels for interface %s af %s",
+        "func": "lde_route_update_release",
+        "line": 2413,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZZFY9-3XQ11": [
+      {
+        "args": "__func__, log_fec(&fn->fec)",
+        "binary": "ldpd/ldpd",
+        "file": "ldpd/lde_lib.c",
+        "fmtstring": "%s: fec %s downstream list not empty",
+        "func": "fec_free",
+        "line": 225,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ]
+  }
+}

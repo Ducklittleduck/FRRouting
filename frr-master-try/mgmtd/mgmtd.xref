@@ -1,0 +1,2885 @@
+{
+  "cli": {
+    "debug_mgmt_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "debug_mgmt",
+          "line": 570
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nManagement Daemon (MGMTD) information\nBackend debug\nDatastore debug\nFrontend debug\nTransaction debug\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 684
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 683
+            },
+            "node": 1
+          }
+        ],
+        "string": "[no$no] debug mgmt {backend$be|datastore$ds|frontend$fe|transaction$txn}"
+      }
+    },
+    "mgmt_commit_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_commit",
+          "line": 138
+        },
+        "doc": "Management Daemon (MGMTD) information\nCommit action\nValidate the set of config commands\nValidate and apply the set of config commands\nAbort and drop the set of config commands recently added\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 671
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt commit <check|apply|abort>$type"
+      }
+    },
+    "mgmt_create_config_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_create_config_data",
+          "line": 155
+        },
+        "doc": "Management Daemon (MGMTD) information\nCreate configuration data\nXPath expression specifying the YANG data path\nValue of the data to create\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 672
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt create-config WORD$path VALUE"
+      }
+    },
+    "mgmt_delete_config_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_delete_config_data",
+          "line": 189
+        },
+        "doc": "Management Daemon (MGMTD) information\nDelete configuration data\nXPath expression specifying the YANG data path\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 674
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt delete-config WORD$path"
+      }
+    },
+    "mgmt_edit_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_edit",
+          "line": 241
+        },
+        "doc": "Management Daemon (MGMTD) information\nEdit configuration data\nCreate data\nDelete data\nMerge data\nReplace data\nRemove data\nXPath expression specifying the YANG data path\nJSON input format (default)\nXML input format\nLock the datastores automatically\nCommit the changes automatically\nData tree\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 677
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt edit {create|delete|merge|replace|remove}$op XPATH [json|xml]$fmt [lock$lock] [commit$commit] [DATA]"
+      }
+    },
+    "mgmt_load_config_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_load_config",
+          "line": 460
+        },
+        "doc": "Management Daemon (MGMTD) information\nLoad configuration onto Candidate Datastore\nFull path of the file\nMerge configuration with contents of Candidate Datastore\nReplace the existing contents of Candidate datastore\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 679
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt load-config WORD$filepath <merge|replace>$type"
+      }
+    },
+    "mgmt_performance_measurement_cmd": {
+      "mgmtd/mgmtd": {
+        "attr": 2,
+        "attrs": [
+          "hidden"
+        ],
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_performance_measurement",
+          "line": 72
+        },
+        "doc": "Negate a command or set its defaults\nManagement Daemon (MGMTD) information\nEnable performance measurement\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 687
+            },
+            "node": 3
+          }
+        ],
+        "string": "[no] mgmt performance-measurement"
+      }
+    },
+    "mgmt_remove_config_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_remove_config_data",
+          "line": 206
+        },
+        "doc": "Management Daemon (MGMTD) information\nRemove configuration data\nXPath expression specifying the YANG data path\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 675
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt remove-config WORD$path"
+      }
+    },
+    "mgmt_replace_config_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_replace_config_data",
+          "line": 223
+        },
+        "doc": "Management Daemon (MGMTD) information\nReplace configuration data\nXPath expression specifying the YANG data path\nValue of the data to set\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 676
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt replace-config WORD$path VALUE"
+      }
+    },
+    "mgmt_reset_performance_stats_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_reset_performance_stats",
+          "line": 87
+        },
+        "doc": "Management Daemon (MGMTD) information\nReset the Performance measurement statistics\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 688
+            },
+            "node": 3
+          }
+        ],
+        "string": "mgmt reset-statistics"
+      }
+    },
+    "mgmt_rollback_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_rollback",
+          "line": 542
+        },
+        "doc": "Management Daemon (MGMTD) information\nRollback commits\nRollback to commit ID\nCommit-ID\nRollbak n commits\nNumber of commits\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 681
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt rollback <commit-id WORD$commit | last [(1-10)]$last>"
+      }
+    },
+    "mgmt_rpc_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_rpc",
+          "line": 299
+        },
+        "doc": "Management Daemon (MGMTD) information\nInvoke RPC\nXPath expression specifying the YANG data path\nJSON input format (default)\nXML input format\nInput data tree\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 678
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt rpc XPATH [json|xml]$fmt [DATA]"
+      }
+    },
+    "mgmt_save_config_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_save_config",
+          "line": 492
+        },
+        "doc": "Management Daemon (MGMTD) information\nSave configuration from datastore\nCandidate datastore\nRunning datastore\nFull path of the file\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 680
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt save-config <candidate|running>$dsname WORD$filepath"
+      }
+    },
+    "mgmt_set_config_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "mgmt_set_config_data",
+          "line": 172
+        },
+        "doc": "Management Daemon (MGMTD) information\nSet configuration data\nXPath expression specifying the YANG data path\nValue of the data to set\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 673
+            },
+            "node": 4
+          }
+        ],
+        "string": "mgmt set-config WORD$path VALUE"
+      }
+    },
+    "show_debugging_mgmt_cmd": {
+      "mgmtd/mgmtd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_debugging_mgmt",
+          "line": 560
+        },
+        "doc": "Show running system information\nDebugging functions\nMGMT Information\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 690
+            },
+            "node": 3
+          }
+        ],
+        "string": "show debugging [mgmt]"
+      }
+    },
+    "show_mgmt_be_adapter_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_be_adapter",
+          "line": 34
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nMGMTD Backend Adapter information\nDisplay all Backend Adapters\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 660
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt backend-adapter all"
+      }
+    },
+    "show_mgmt_be_xpath_reg_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_be_xpath_reg",
+          "line": 47
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nBackend Adapter YANG Xpath Registry\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 661
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt backend-yang-xpath-registry"
+      }
+    },
+    "show_mgmt_cmt_hist_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_cmt_hist",
+          "line": 531
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nShow commit history\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 669
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt commit-history"
+      }
+    },
+    "show_mgmt_ds_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_ds",
+          "line": 111
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nMGMTD Datastore information\nAll datastores (default)\nCandidate datastore\nOperational datastore\nRunning datastore\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 664
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt datastore [all|candidate|operational|running]$dsname"
+      }
+    },
+    "show_mgmt_dump_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_dump_data",
+          "line": 401
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nGet Datastore contents from a specific datastore\nCandidate datastore (default)\nOperational datastore\nRunning datastore\nXPath expression specifying the YANG data path\nXPath string\nDump the contents to a file\nFull path of the file\njson output\nxml output\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 667
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt datastore-contents [candidate|operational|running]$dsname [xpath WORD$path] [file WORD$filepath] <json|xml>$fmt"
+      }
+    },
+    "show_mgmt_fe_adapter_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_fe_adapter",
+          "line": 59
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nMGMTD Frontend Adapter information\nDisplay all Frontend Adapters\nDisplay more details\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 662
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt frontend-adapter all [detail$detail]"
+      }
+    },
+    "show_mgmt_get_config_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_get_config",
+          "line": 314
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nGet configuration data from a specific configuration datastore\nCandidate datastore (default)\nOperational datastore\nRunning datastore\nXPath expression specifying the YANG data path\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 665
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt get-config [candidate|operational|running]$dsname WORD$path"
+      }
+    },
+    "show_mgmt_get_data_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_get_data",
+          "line": 334
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nGet a data from the operational datastore\nXPath expression specifying the YANG data root\nSpecify datastore to get data from (operational by default)\nCandidate datastore\nRunning datastore\nOperational datastore\nInclude \"config true\" data\nGet only \"config true\" data\nGet exact node instead of the whole data tree\nConfigure 'with-defaults' mode per RFC 6243 (\"explicit\" mode by default)\nUse \"trim\" mode\nUse \"report-all-tagged\" mode\nUse \"report-all\" mode\nJSON output format\nXML output format\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 666
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt get-data WORD$path [datastore <candidate|running|operational>$ds] [with-config|only-config]$content [exact]$exact [with-defaults <trim|all-tag|all>$wd] [json|xml]$fmt"
+      }
+    },
+    "show_mgmt_map_xpath_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_map_xpath",
+          "line": 448
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nGet YANG Backend Subscription\nXPath expression specifying the YANG data path\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 668
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt yang-xpath-subscription WORD$path"
+      }
+    },
+    "show_mgmt_txn_cmd": {
+      "mgmtd/mgmtd": {
+        "defun": {
+          "file": "mgmtd/mgmt_vty.c",
+          "func": "show_mgmt_txn",
+          "line": 98
+        },
+        "doc": "Show running system information\nManagement Daemon (MGMTD) information\nMGMTD Transaction information\nDisplay all Transactions\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "mgmtd/mgmt_vty.c",
+              "func": "mgmt_vty_init",
+              "line": 663
+            },
+            "node": 1
+          }
+        ],
+        "string": "show mgmt transaction all"
+      }
+    }
+  },
+  "refs": {
+    "G2D9G-TRHJ5": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: adapter %s: session-id %llu received NOTIFY_SELECT message",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1703,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "G4ATJ-96JC5": [
+      {
+        "args": "__func__, txn->txn_id, mgmt_txn_commit_phase_str(txn)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: txn-id: %llu, Phase '%s'",
+        "func": "mgmt_try_move_commit_to_next_phase",
+        "line": 844,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "G5ZME-QA0XP": [
+      {
+        "args": "__func__, data_reply->n_data, data_reply->next_indx",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Sending %zu Get-Config/Data replies next-index:%lld",
+        "func": "mgmt_txn_send_getcfg_reply_data",
+        "line": 1594,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GC3AM-48AK6": [
+      {
+        "args": "__func__, adapter->name, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Sending CFG_APPLY_REQ to '%s' txn-id: %llu",
+        "func": "mgmt_be_send_cfgapply_req",
+        "line": 638,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GHNHK-3DAZ2": [
+      {
+        "args": "__func__, get_data->xpaths[indx]",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Trying to get all data under '%s'",
+        "func": "mgmt_txn_get_config",
+        "line": 1692,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GJRWC-MFT2K": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "cannot initialize frontend server",
+        "func": "mgmt_fe_adapter_init",
+        "line": 1847,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "GMWC7-WF1JZ": [
+      {
+        "args": "__func__, adapter->name, txn_id, end_of_data ? \"yes\" : \"no\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Sending CFGDATA_CREATE_REQ to '%s' txn-id: %llu last: %s",
+        "func": "mgmt_be_send_cfgdata_req",
+        "line": 619,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GPC71-4WQZ8": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id), xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Checking client: %s for xpath: '%s'",
+        "func": "be_is_client_interested",
+        "line": 1025,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GQ8KV-15JJB": [
+      {
+        "args": "__func__, session->cfg_txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created new Config txn-id: %llu for session-id %llu",
+        "func": "mgmt_fe_session_handle_setcfg_req_msg",
+        "line": 748,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GT2DP-1XR3T": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: For implicit commit config only one SETCFG-REQ can be allowed!",
+        "func": "mgmt_txn_send_set_config_req",
+        "line": 2063,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "GTW2Z-9TWMX": [
+      {
+        "args": "__func__, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending COMMIT_CONFIG_REPLY message to MGMTD Frontend client '%s'",
+        "func": "fe_adapter_send_commit_cfg_reply",
+        "line": 439,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GWNS4-S94AF": [
+      {
+        "args": "__func__, txn_req->req_id, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added a new SETCFG req-id: %llu txn-id: %llu, session-id: %llu",
+        "func": "mgmt_txn_req_alloc",
+        "line": 399,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GYMXJ-2Y8ZS": [
+      {
+        "args": "__func__, base_xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s:  -- END: base xpath: '%s'",
+        "func": "mgmt_walk_ds_nodes",
+        "line": 346,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GZAAR-8X088": [
+      {
+        "args": "__func__, mgmt_ds_id2name(fe_msg->commcfg_req->src_ds_id), mgmt_ds_id2name(fe_msg->commcfg_req->dst_ds_id), fe_msg->commcfg_req->abort ? 'T' : 'F', fe_msg->commcfg_req->session_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got COMMCFG_REQ for src-DS:%s dst-DS:%s (Abort:%c) on session-id %llu from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 1018,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H22KT-M5VD2": [
+      {
+        "args": "__func__, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created new rpc txn-id: %llu for session-id: %llu",
+        "func": "fe_adapter_handle_rpc",
+        "line": 1642,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H356G-8H822": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, req_id, changed, created, (((((uint8_t *)(msg)) == ((void *)0)) ? 0 : (((struct darr_metadata *)((uint8_t *)(msg))) - 1)->len))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending edit-reply from adapter %s to session-id %llu req-id %llu changed %u created %u len %u",
+        "func": "fe_adapter_send_edit_reply",
+        "line": 1187,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H7JX4-WT6FK": [
+      {
+        "args": "__func__, txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Backend timeout txn-id: %llu aborting commit",
+        "func": "mgmt_txn_cfg_commit_timedout",
+        "line": 1284,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "H9TPT-GV9BE": [
+      {
+        "args": "path, safe_strerror((*__errno_location ()))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "Failed to remove commit history file %s: %s",
+        "func": "remove_file",
+        "line": 48,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HAWY9-CP261": [
+      {
+        "args": "index_path",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "Failed to open commit history %pSQq for writing: %m",
+        "func": "mgmt_history_dump_cmt_record_index",
+        "line": 164,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HB2HD-CF6RT": [
+      {
+        "args": "__func__, (*txn_req)->req_id, (*txn_req)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleting COMMITCFG req-id: %llu txn-id: %llu",
+        "func": "mgmt_txn_req_free",
+        "line": 477,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HBCE7-K8BKH": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Sent rpc req to backend client %s",
+        "func": "mgmt_txn_send_rpc",
+        "line": 2636,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HG3TJ-3719E": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Added new MGMTD Frontend adapter '%s'",
+        "func": "mgmt_fe_create_adapter",
+        "line": 1908,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HH5RX-HTKPY": [
+      {
+        "args": "__func__, txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Backend timeout txn-id: %llu ending rpc",
+        "func": "txn_rpc_timeout",
+        "line": 1415,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HHC3W-Q0YY2": [
+      {
+        "args": "__func__, data_req[indx]->data->xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: XPath: '%s'",
+        "func": "mgmt_txn_send_get_req",
+        "line": 2408,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HK8WE-F85JN": [
+      {
+        "args": "__func__, msg->client_name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Set client-name to '%s'",
+        "func": "fe_adapter_handle_session_req",
+        "line": 1273,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HNS0A-6V3Y7": [
+      {
+        "args": "__func__, be_msg->txn_reply->create ? \"Create\" : \"Delete\", adapter->name, be_msg->txn_reply->txn_id, be_msg->txn_reply->success ? \"success\" : \"failure\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got %s TXN_REPLY from '%s' txn-id %llx with '%s'",
+        "func": "mgmt_be_adapter_handle_msg",
+        "line": 518,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HQ1C9-SE3Y2": [
+      {
+        "args": "__func__, xpath, value ? value : \"NIL\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: XPATH: %s, Value: '%s'",
+        "func": "mgmt_txn_create_config_batches",
+        "line": 918,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "J29MR-4FF1X": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: notify disconnect for client adapter '%s'",
+        "func": "mgmt_be_adapter_notify_disconnect",
+        "line": 395,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "J2RAS-MZ95C": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_main.c",
+        "fmtstring": "Terminating on signal",
+        "func": "sigint",
+        "line": 86,
+        "priority": 5,
+        "type": "logmsg"
+      }
+    ],
+    "J41CP-QTFNJ": [
+      {
+        "args": "__func__, len, be_msg->message_case, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Decoded %zu bytes of message: %u for adapter: %s",
+        "func": "mgmt_be_adapter_process_msg",
+        "line": 776,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "J4RYE-NNRC7": [
+      {
+        "args": "__func__, fe_msg->message_case, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: Got unhandled message of type %u from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 1038,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "J58AF-D3YSJ": [
+      {
+        "args": "__func__, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending GET_REPLY message to MGMTD Frontend client '%s'",
+        "func": "fe_adapter_send_get_reply",
+        "line": 480,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "J5RFG-9FD73": [
+      {
+        "args": "__func__, adapter->name, adapter->conn->fd, old->conn->fd",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Client '%s' (FD:%d) seems to have reconnected. Removing old connection (FD:%d)!",
+        "func": "mgmt_be_adapter_cleanup_old_conn",
+        "line": 413,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JEYZ6-C7QXD": [
+      {
+        "args": "__func__, adapter->name, be_msg->cfg_data_reply->txn_id, be_msg->cfg_data_reply->error_if_any ? be_msg->cfg_data_reply->error_if_any : \"None\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got CFGDATA_REPLY from '%s' txn-id %llx err:'%s'",
+        "func": "mgmt_be_adapter_handle_msg",
+        "line": 531,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JGT5M-30778": [
+      {
+        "args": "__func__, len, fe_msg->message_case, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Decoded %zu bytes of message: %u from adapter: %s",
+        "func": "mgmt_fe_adapter_process_msg",
+        "line": 1751,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JJNWN-NEPP0": [
+      {
+        "args": "__func__, txn_req->req.set_cfg->dst_ds_id, txn->txn_id, txn->session_id, strerror(ret)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: DS %u not locked for implicit commit txn-id: %llu session-id: %llu err: %s",
+        "func": "mgmt_txn_process_set_cfg",
+        "line": 631,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "JQFQN-HGRJT": [
+      {
+        "args": "__func__, txn_req->txn->txn_id, txn_req->txn->session_id, txn_req->req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to send GET-CONFIG-REPLY txn-id: %llu session-id: %llu req-id: %llu",
+        "func": "mgmt_txn_send_getcfg_reply_data",
+        "line": 1603,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "JRWMK-2T50D": [
+      {
+        "args": "__func__, xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: XPATH: '%s'",
+        "func": "mgmt_be_interested_clients",
+        "line": 993,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JTGJE-PSQ5E": [
+      {
+        "args": "__func__, fe_msg->session_req->session_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got SESSION_REQ (destroy) for session-id %llufrom '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 979,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JZJR0-06S1S": [
+      {
+        "args": "__func__, *init",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s:  - RPC XPATH: '%s'",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 315,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JZY30-8ZCPB": [
+      {
+        "args": "__func__, xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Daemons interested in XPATH are not currently connected: %s",
+        "func": "mgmt_txn_create_config_batches",
+        "line": 986,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "K2X00-2H682": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id, mgmt_txn_commit_phase_str(txn)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Processing COMMIT_CONFIG for txn-id: %llu session-id: %llu Phase '%s'",
+        "func": "mgmt_txn_process_commit_cfg",
+        "line": 1489,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "K576Z-D6TK6": [
+      {
+        "args": "__func__, adapter->name, adapter->conn->fd, old->conn->fd",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Client '%s' (FD:%d) seems to have reconnected. Removing old connection (FD:%d)",
+        "func": "mgmt_fe_adapter_cleanup_old_conn",
+        "line": 624,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "K627Y-E14RH": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, msg->req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Received RPC request from client %s for session-id %llu req-id %llu",
+        "func": "fe_adapter_handle_rpc",
+        "line": 1589,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KF39R-NRP86": [
+      {
+        "args": "__func__, adapter->name, txn->txn_id, error_if_any ? error_if_any : \"None\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: CFGDATA_CREATE_REQ sent to '%s' failed txn-id: %llu err: %s",
+        "func": "mgmt_txn_notify_be_cfgdata_reply",
+        "line": 2323,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "KN55M-CP8B8": [
+      {
+        "args": "index_path",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "More records found in commit history file %pSQq than expected",
+        "func": "mgmt_history_read_cmt_record_index",
+        "line": 138,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KNSTN-DTB1P": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to create CONFIG Transaction for downloading CONFIGs for client '%s'",
+        "func": "mgmt_txn_notify_be_adapter_conn",
+        "line": 2213,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "KS7D8-5K1MQ": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Commit already in-progress txn-id: %llu session-id: %llu. Cannot start another",
+        "func": "mgmt_txn_send_commit_config_req",
+        "line": 2151,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "KT7ZF-VQ5C1": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to send SET-CONFIG-REPLY txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_send_commit_cfg_reply",
+        "line": 734,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "KV3DV-0VX0D": [
+      {
+        "args": "__func__, (*txn_req)->req_id, (*txn_req)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleting GETCFG req-id: %llu txn-id: %llu",
+        "func": "mgmt_txn_req_free",
+        "line": 516,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KW1M6-BME52": [
+      {
+        "args": "__func__, mgmt_ds_id2name(fe_msg->get_req->ds_id), (int)fe_msg->get_req->n_data, fe_msg->get_req->session_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got GET_REQ for DS:%s (xpaths: %d) on session-id %llu from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 1029,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KZM72-K5F30": [
+      {
+        "args": "__func__, adapter->name, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Sending TXN_REQ to '%s' txn-id: %llu",
+        "func": "mgmt_be_send_txn_req",
+        "line": 596,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KZXXY-5DWYN": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: client: %s: not interested",
+        "func": "be_is_client_interested",
+        "line": 1034,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "M2DNX-H9SXM": [
+      {
+        "args": "__func__, dst->ds_id, src->ds_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s: Merging DS %d with %d",
+        "func": "mgmt_ds_merge_src_with_dst_ds",
+        "line": 106,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "M4JAX-PDYVT": [
+      {
+        "args": "__func__, adapter->name, txn->txn_id, error_if_any ? error_if_any : \"None\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: CFGDATA_CREATE_REQ sent to '%s' was successful txn-id: %llu err: %s",
+        "func": "mgmt_txn_notify_be_cfgdata_reply",
+        "line": 2335,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MEZ6A-PR17Q": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: adapter %s: session-id %llu received RPC message",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1715,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MSBR4-R58RT": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Cient: %s: subscribed",
+        "func": "mgmt_be_interested_clients",
+        "line": 1000,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MTKF9-6P2PR": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_vty.c",
+        "fmtstring": "%s: no connection to front-end server, retry in 1s",
+        "func": "mgmt_config_read_in",
+        "line": 603,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MXCYE-XGGZ3": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: client: %s: interested",
+        "func": "be_is_client_interested",
+        "line": 1030,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MYSMD-ZAAT8": [
+      {
+        "args": "__func__, (*batch)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s:  freeing batch txn-id %llu",
+        "func": "mgmt_txn_cfg_batch_free",
+        "line": 342,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MZMN7-7BHZT": [
+      {
+        "args": "__func__, (*txn_req)->req_id, (*txn_req)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleting SETCFG req-id: %llu txn-id: %llu",
+        "func": "mgmt_txn_req_free",
+        "line": 472,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N0RJ4-47AV1": [
+      {
+        "args": "__func__, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Transaction in progress txn-id: %llu for session-id: %llu",
+        "func": "mgmt_fe_session_handle_get_req_msg",
+        "line": 825,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N6XGQ-2DC7G": [
+      {
+        "args": "__func__, session->adapter->name, scok",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending LOCK_DS_REPLY message to MGMTD Frontend client '%s' scok: %d",
+        "func": "fe_adapter_send_lockds_reply",
+        "line": 360,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N9CNR-4Q4B7": [
+      {
+        "args": "__func__, be_msg->subscr_req->client_name, be_msg->subscr_req->n_config_xpaths, be_msg->subscr_req->n_oper_xpaths, be_msg->subscr_req->n_notif_xpaths, be_msg->subscr_req->n_rpc_xpaths",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got SUBSCR_REQ from '%s' to register xpaths config: %zu oper: %zu notif: %zu rpc: %zu",
+        "func": "mgmt_be_adapter_handle_msg",
+        "line": 462,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N9QCW-0C0ZZ": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: deleting client adapter '%s'",
+        "func": "mgmt_be_adapter_delete",
+        "line": 376,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NC6K9-HFDY4": [
+      {
+        "args": "__func__, session->cfg_txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created txn-id: %llu for session-id %llu for COMMIT-CFG-REQ",
+        "func": "mgmt_fe_session_handle_commit_config_req_msg",
+        "line": 914,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ND88S-0F42G": [
+      {
+        "args": "__func__, *init",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s:  - CFG XPATH: '%s'",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 294,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NED2J-TGZX0": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: adapter %s: session-id %llu received EDIT message",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1698,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NGTCT-QMWE7": [
+      {
+        "args": "__func__, file, line, mgmt_txn_type2str((*txn)->type), (*txn)->txn_id, (*txn)->refcount",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: %s:%d --> Unlock %s txn-id: %llu refcnt: %d",
+        "func": "mgmt_txn_unlock",
+        "line": 1919,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NQ6RV-ZKBJE": [
+      {
+        "args": "__func__, get_req->total_reply, data->xpath, data_value->encoded_str_val",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s:  [%d] XPATH: '%s', Value: '%s'",
+        "func": "txn_iter_get_config_data_cb",
+        "line": 1657,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "NXBRF-EC7FV": [
+      {
+        "args": "__func__, notif",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: ERROR: No schema found for notification: %s",
+        "func": "mgmt_be_adapter_send_notify",
+        "line": 674,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "P0MPJ-1WS6A": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to send EDIT-REPLY txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_send_commit_cfg_reply",
+        "line": 751,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "P1JSC-HW1WS": [
+      {
+        "args": "__func__, txn_req->req_event",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Invalid Txn-Req-Event %u",
+        "func": "mgmt_txn_send_getcfg_reply_data",
+        "line": 1614,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "P2B17-RQK61": [
+      {
+        "args": "__func__, adapter->name, len",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: native message to adapter %s too short %zu",
+        "func": "mgmt_fe_adapter_process_msg",
+        "line": 1740,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "PD7ND-H67SH": [
+      {
+        "args": "__func__, adapter->name, (int)batch->num_cfg_data",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s:  -- %s, batch item:%d",
+        "func": "mgmt_txn_create_config_batches",
+        "line": 978,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PE8AW-TN95B": [
+      {
+        "args": "__func__, xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s:  -- Child xpath: %s",
+        "func": "mgmt_walk_ds_nodes",
+        "line": 338,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PGMNP-VC5E0": [
+      {
+        "args": "__func__, client_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Session not found using client-id %llu",
+        "func": "mgmt_fe_find_session_by_client_id",
+        "line": 213,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PMQM1-A1JDM": [
+      {
+        "args": "__func__, get_data->xpaths[indx]",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Invalid Xpath '%s",
+        "func": "mgmt_txn_get_config",
+        "line": 1704,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PQQ7X-4GQ3S": [
+      {
+        "args": "__func__, *init",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s:  - NOTIF XPATH: '%s'",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 308,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PRJPK-DZT4F": [
+      {
+        "args": "__func__, txn_req->req_id, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added a new GETTREE req-id: %llu txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_req_alloc",
+        "line": 432,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PTHD6-9XN5R": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_main.c",
+        "fmtstring": "MGMTD restarting!",
+        "func": "sighup",
+        "line": 74,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "PXNE3-BB72T": [
+      {
+        "args": "__func__, fe_msg->lockds_req->lock ? \"\" : \"UN\", mgmt_ds_id2name(fe_msg->lockds_req->ds_id), fe_msg->lockds_req->session_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got LOCKDS_REQ (%sLOCK) for DS:%s for session-id %llu from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 993,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PYR9H-051KG": [
+      {
+        "args": "__func__, mgmt_txn_reqs_count(&txn->set_cfg_reqs), txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Processing %zu SET_CONFIG requests txn-id:%llu session-id: %llu",
+        "func": "mgmt_txn_process_set_cfg",
+        "line": 576,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q2Y37-0YFYS": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: ERROR: Corrupt notify msg",
+        "func": "mgmt_be_adapter_send_notify",
+        "line": 668,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Q57A9-NCT0W": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, req_id, result_type",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: Error building rpc-reply result for client %s session-id %llu req-id %llu result type %u",
+        "func": "fe_adapter_send_rpc_reply",
+        "line": 1144,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Q5NHP-Q996K": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Init XPath Maps",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 289,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q5TEJ-V4JJA": [
+      {
+        "args": "__func__, txn_req->req_id, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added a new COMMITCFG req-id: %llu txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_req_alloc",
+        "line": 405,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q93XB-68BKQ": [
+      {
+        "args": "__func__, adapter->name, success",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Sending SUBSCR_REPLY client: %s success: %u",
+        "func": "mgmt_be_send_subscr_reply",
+        "line": 443,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QBE5J-WD9KA": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Could not send rpc message to backend client %s",
+        "func": "mgmt_txn_send_rpc",
+        "line": 2631,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QE3P8-5V5DJ": [
+      {
+        "args": "__func__, (((be_oper_xpath_map) == ((void *)0)) ? 0 : (((struct darr_metadata *)(be_oper_xpath_map)) - 1)->len)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Total Oper XPath Maps: %u",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 322,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QF7KE-8JCBX": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got RPC_REPLY from '%s' txn-id %llx",
+        "func": "be_adapter_handle_native_msg",
+        "line": 731,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QKC5X-C2XV6": [
+      {
+        "args": "__func__, txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Backend timeout txn-id: %llu ending get-tree",
+        "func": "txn_get_tree_timeout",
+        "line": 1390,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QM5BJ-8EW0F": [
+      {
+        "args": "__func__, adapter->name, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: RPC reply from %s for a missing txn-id %llu",
+        "func": "mgmt_txn_notify_rpc_reply",
+        "line": 2814,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QQ1WS-K8VYX": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, req_id, short_circuit_ok, result_type",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: Error building get-tree result for client %s session-id %llu req-id %llu scok %d result type %u",
+        "func": "fe_adapter_send_tree_data",
+        "line": 1104,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QR1C4-PWJKW": [
+      {
+        "args": "__func__, get_reply->num_reply, get_data->xpaths[indx]",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Got %d remaining data-replies for xpath '%s'",
+        "func": "mgmt_txn_get_config",
+        "line": 1711,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QR83C-W3FH2": [
+      {
+        "args": "__func__, txn_req->req.get_data->ds_id, txn->txn_id, txn->session_id, txn_req->req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Unable to retrieve config from DS %d txn-id: %llu session-id: %llu req-id: %llu",
+        "func": "mgmt_txn_process_get_cfg",
+        "line": 1751,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "QV0CF-4ET0W": [
+      {
+        "args": "__func__, file, line, mgmt_txn_type2str(txn->type), txn->txn_id, txn->refcount",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: %s:%d --> Lock %s txn-id: %llu refcnt: %d",
+        "func": "mgmt_txn_lock",
+        "line": 1909,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "R03KC-P6E9P": [
+      {
+        "args": "__func__, (((be_notif_xpath_map) == ((void *)0)) ? 0 : (((struct darr_metadata *)(be_notif_xpath_map)) - 1)->len)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Total Noitf XPath Maps: %u",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 323,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "R9YTF-P2JBH": [
+      {
+        "args": "__func__, adapter->name, txn->txn_id, error_if_any ? error_if_any : \"None\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: CFGDATA_APPLY_REQ sent to '%s' failed txn-id: %llu err: %s",
+        "func": "mgmt_txn_notify_be_cfg_apply_reply",
+        "line": 2360,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RAB7T-FWCE6": [
+      {
+        "args": "__func__, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: failed sending error for txn-id %llu session not found",
+        "func": "mgmt_fe_adapter_txn_error",
+        "line": 2069,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RBRNR-VK3T9": [
+      {
+        "args": "__func__, msg->refer_id, msg->req_id, msg->code, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: ERROR: unknown native message txn-id %llu req-id %llu code %u from BE client for adapter %s",
+        "func": "be_adapter_handle_native_msg",
+        "line": 744,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RHBBP-8QHQW": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Could not send get-tree message to backend client %s",
+        "func": "mgmt_txn_send_get_tree_oper",
+        "line": 2522,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RK75P-DECBZ": [
+      {
+        "args": "index_path",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "Failed to open commit history %pSQq for reading: %m",
+        "func": "mgmt_history_read_cmt_record_index",
+        "line": 120,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RKZ8G-NH4SJ": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: deleting client adapter '%s'",
+        "func": "mgmt_fe_adapter_delete",
+        "line": 588,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RMQFX-5WZBZ": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id, mgmt_txn_commit_phase_str(txn)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: txn-id: %llu session-id: %llu Phase '%s'",
+        "func": "mgmt_txn_send_be_txn_create",
+        "line": 1207,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RRNKY-D3KN8": [
+      {
+        "args": "__func__, ds_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s:  -- START DS walk for DSid: %d",
+        "func": "mgmt_ds_iter_data",
+        "line": 453,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RRRSQ-037G1": [
+      {
+        "args": "__func__, msg->refer_id == 0, msg->refer_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got session-req creating: %u for refer-id %llu from '%s'",
+        "func": "fe_adapter_handle_session_req",
+        "line": 1240,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RS85Q-QGG5F": [
+      {
+        "args": "cmt_info.cmt_json_file",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "Commit in index, but file %s missing",
+        "func": "mgmt_history_read_cmt_record_index",
+        "line": 128,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RTJ48-NP3EH": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id, reply_msg->result_type, ly_strerrcode(err)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: RPC reply from %s for txn-id %llu req_id %llu error parsing result of type %u: %s",
+        "func": "mgmt_txn_notify_rpc_reply",
+        "line": 2837,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RV711-A4GYQ": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to create CONFIG Transaction for downloading CONFIGs",
+        "func": "mgmt_txn_rollback_trigger_cfg_apply",
+        "line": 2925,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RWNK0-361N8": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Added new MGMTD Backend adapter '%s'",
+        "func": "mgmt_be_create_adapter",
+        "line": 911,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "S90TQ-8PJS5": [
+      {
+        "args": "__func__, num_processed, 128, (int)left",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Processed maximum number of Set-Config requests (%d/%d/%d). Rescheduling for rest.",
+        "func": "mgmt_txn_process_set_cfg",
+        "line": 686,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SFGGJ-5TMGR": [
+      {
+        "args": "__func__, txn->txn_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Could not send CFGDATA_CREATE txn-id: %llu to client '%s",
+        "func": "mgmt_txn_send_be_cfg_data",
+        "line": 1241,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "SFM57-AW3FA": [
+      {
+        "args": "__func__, txn->txn_id, req_id, get_tree->result_type",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Error sending the results of GETTREE for txn-id %llu req_id %llu to requested type %u",
+        "func": "txn_get_tree_data_done",
+        "line": 1337,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "SFP5P-4TX1N": [
+      {
+        "args": "session->session_id, mgmt_ds_id2name(ds_id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "multiple lock taken by session-id: %llu on DS:%s",
+        "func": "mgmt_fe_session_write_lock_ds",
+        "line": 77,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "SQNPP-0S50A": [
+      {
+        "args": "__func__, mgmt_ds_id2name(dst->ds_id), mgmt_ds_id2name(src->ds_id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s: Replacing %s with %s",
+        "func": "mgmt_ds_replace_dst_with_src_ds",
+        "line": 83,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SS87J-HH6N0": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got NOTIFY from '%s'",
+        "func": "be_adapter_handle_native_msg",
+        "line": 739,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SYBC6-73WER": [
+      {
+        "args": "__func__, session->cfg_txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created new config txn-id: %llu for session-id: %llu",
+        "func": "fe_adapter_handle_edit",
+        "line": 1518,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "T4G3M-4C9XJ": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, msg->req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Received get-data request from client %s for session-id %llu req-id %llu",
+        "func": "fe_adapter_handle_get_data",
+        "line": 1301,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "T8HFB-FKTJ4": [
+      {
+        "args": "__func__, txn->txn_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Created initial txn-id: %llu for BE client '%s'",
+        "func": "mgmt_txn_notify_be_adapter_conn",
+        "line": 2220,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TDP2M-R6CWH": [
+      {
+        "args": "__func__, mgmt_txn_type2str(type), txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added new '%s' txn-id: %llu",
+        "func": "mgmt_txn_create_new",
+        "line": 1826,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TNQPH-3PX3T": [
+      {
+        "args": "__func__, (*txn_req)->req_id, (*txn_req)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleting GETTREE req-id: %llu of txn-id: %llu",
+        "func": "mgmt_txn_req_free",
+        "line": 528,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TPPH5-9W3KS": [
+      {
+        "args": "__func__, len, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Failed to decode %zu bytes for adapter: %s",
+        "func": "mgmt_fe_adapter_process_msg",
+        "line": 1747,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TRA5R-4HR77": [
+      {
+        "args": "__func__, (*txn_req)->req_id, mgmt_txn_reqs_count(req_list)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Removed req-id: %llu from request-list (left:%zu)",
+        "func": "mgmt_txn_req_free",
+        "line": 550,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TRV8T-JGFVX": [
+      {
+        "args": "__func__, adapter->name, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: GETTREE reply from %s for a missing txn-id %llu",
+        "func": "mgmt_txn_notify_tree_data_reply",
+        "line": 2742,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "TSGMA-GRQJX": [
+      {
+        "args": "__func__, mgmt_txn_type2str((*txn)->type), (*txn)->txn_id, (*txn)->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleted %s txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_unlock",
+        "line": 1933,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TY529-MDPBD": [
+      {
+        "args": "__func__, (*txn_req)->req_id, (*txn_req)->txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Deleting RPC req-id: %llu txn-id: %llu",
+        "func": "mgmt_txn_req_free",
+        "line": 536,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V3V6N-T4YZ2": [
+      {
+        "args": "__func__, mgmt_ds_id2name(ds_id), session->session_id, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Failed to lock the DS:%s for session-id: %llu from %s!",
+        "func": "mgmt_fe_session_write_lock_ds",
+        "line": 82,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V5BH5-KQPY3": [
+      {
+        "args": "__func__, txn->txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Created rollback txn-id: %llu",
+        "func": "mgmt_txn_rollback_trigger_cfg_apply",
+        "line": 2930,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V65CP-FTVY7": [
+      {
+        "args": "__func__, msg->xpath, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: No backends provide xpath: %s for txn-id: %llu session-id: %llu",
+        "func": "fe_adapter_handle_get_data",
+        "line": 1396,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V6EEP-Q10RZ": [
+      {
+        "args": "__func__, *init",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s:  - OPER XPATH: '%s'",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 301,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VFPSS-N4V16": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: ERROR: Unable to resolve adapter '%s' to a valid ID. Disconnecting!",
+        "func": "mgmt_be_adapter_handle_msg",
+        "line": 474,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VJA0Q-T74M4": [
+      {
+        "args": "__func__, txn_req->req_id, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added a new RPC req-id: %llu txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_req_alloc",
+        "line": 441,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VMRW3-EJ6ZX": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got ERROR from '%s' txn-id %llx",
+        "func": "be_adapter_handle_native_msg",
+        "line": 711,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VNSS1-Q9XX7": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "XXX txn in progress, retry init",
+        "func": "mgmt_be_adapter_conn_init",
+        "line": 809,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VP76R-EE0KJ": [
+      {
+        "args": "__func__, adapter->name, session_id, req_id, (((((uint8_t *)(msg)) == ((void *)0)) ? 0 : (((struct darr_metadata *)((uint8_t *)(msg))) - 1)->len))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending session-reply from adapter %s to session-id %llu req-id %llu len %u",
+        "func": "fe_adapter_native_send_session_reply",
+        "line": 1215,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VS5MK-02W25": [
+      {
+        "args": "session->session_id, mgmt_ds_id2name(ds_id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "unlock unlocked by session-id: %llu on DS:%s",
+        "func": "mgmt_fe_session_unlock_ds",
+        "line": 104,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VXENE-A2K9H": [
+      {
+        "args": "__func__, ret",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "%s: ERROR: merge failed with err: %d",
+        "func": "mgmt_ds_merge_src_with_dst_ds",
+        "line": 116,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "VYH8G-31RMV": [
+      {
+        "args": "__func__, mgmt_txn_reqs_count(&txn->get_cfg_reqs), txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Processing %zu GET_CONFIG requests txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_process_get_cfg",
+        "line": 1739,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "W6XT9-6A6BK": [
+      {
+        "args": "__func__, num_processed, 128",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Processed maximum number of Get-Config requests (%d/%d). Rescheduling for rest.",
+        "func": "mgmt_txn_process_get_cfg",
+        "line": 1777,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WAKDM-VFVSX": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: adapter %s: recv msg unknown session-id %llu",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1690,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "WDP3B-VCJQ4": [
+      {
+        "args": "__func__, lockds_req->ds_id, session->session_id, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Failed to send LOCK_DS_REPLY for DS %u session-id: %llu from %s",
+        "func": "mgmt_fe_session_handle_lockds_req_msg",
+        "line": 678,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WFK32-YAC2F": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_main.c",
+        "fmtstring": "SIGHUP received, ignoring",
+        "func": "sighup",
+        "line": 56,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "WJNQK-ZCA5S": [
+      {
+        "args": "__func__, cfg_req[indx]->data->xpath, (cfg_req[indx]->data->value && cfg_req[indx]->data->value->encoded_str_val ? cfg_req[indx]->data->value->encoded_str_val : \"NULL\")",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: XPath: '%s', Value: '%s'",
+        "func": "mgmt_txn_send_set_config_req",
+        "line": 2106,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WMWCQ-RYPRT": [
+      {
+        "args": "__func__, (((be_cfg_xpath_map) == ((void *)0)) ? 0 : (((struct darr_metadata *)(be_cfg_xpath_map)) - 1)->len)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Total Cfg XPath Maps: %u",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 321,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WN146-5Q5XG": [
+      {
+        "args": "__func__, notif",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: No schema found for notification: %s",
+        "func": "mgmt_fe_adapter_send_notify",
+        "line": 1781,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "WP6AS-TQF2Y": [
+      {
+        "args": "__func__, base_xpath",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s:  -- START: base xpath: '%s'",
+        "func": "mgmt_walk_ds_nodes",
+        "line": 302,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WXKF8-JBAFA": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: notify disconnect for client adapter '%s'",
+        "func": "mgmt_fe_adapter_notify_disconnect",
+        "line": 603,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WYPFG-8Z0AB": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, req_id, (((((uint8_t *)(msg)) == ((void *)0)) ? 0 : (((struct darr_metadata *)((uint8_t *)(msg))) - 1)->len))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending rpc-reply from adapter %s to session-id %llu req-id %llu len %u",
+        "func": "fe_adapter_send_rpc_reply",
+        "line": 1152,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WYQGB-PNMSA": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got TREE_DATA from '%s' txn-id %llx",
+        "func": "be_adapter_handle_native_msg",
+        "line": 722,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WYZK9-83K77": [
+      {
+        "args": "__func__, be_msg->cfg_apply_reply->success ? \"successful\" : \"failed\", adapter->name, be_msg->cfg_apply_reply->txn_id, be_msg->cfg_apply_reply->error_if_any ? be_msg->cfg_apply_reply->error_if_any : \"None\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Got %s CFG_APPLY_REPLY from '%s' txn-id %llx err:'%s'",
+        "func": "mgmt_be_adapter_handle_msg",
+        "line": 545,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WZ5BX-S1DTF": [
+      {
+        "args": "__func__, adapter->name, len",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: ERROR: native message to adapter %s too short %zu",
+        "func": "mgmt_be_adapter_process_msg",
+        "line": 765,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X1GN4-BM7JF": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id, ly_strerrcode(err)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: RPC reply from %s for txn-id %llu req_id %llu error merging result: %s",
+        "func": "mgmt_txn_notify_rpc_reply",
+        "line": 2849,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X47RG-DJGGR": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Error reply from %s for txn-id %llu req_id %llu",
+        "func": "mgmt_txn_notify_error",
+        "line": 2688,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X5FX0-05YRS": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: GETTREE reply from %s for txn-id %llu missing req_id %llu",
+        "func": "mgmt_txn_notify_tree_data_reply",
+        "line": 2752,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X61WY-12SNP": [
+      {
+        "args": "__func__, adapter->name, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Error reply from %s cannot find txn-id %llu",
+        "func": "mgmt_txn_notify_error",
+        "line": 2668,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "X6G89-77Z5J": [
+      {
+        "args": "__func__, cfg_chg->value, cfg_chg->value",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Allocated value at %p ==> '%s'",
+        "func": "mgmt_txn_send_set_config_req",
+        "line": 2120,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XBM34-JED8D": [
+      {
+        "args": "__func__, session->adapter->name, session->session_id, req_id, short_circuit_ok, result_type, (((((uint8_t *)(msg)) == ((void *)0)) ? 0 : (((struct darr_metadata *)((uint8_t *)(msg))) - 1)->len))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending get-tree result from adapter %s to session-id %llu req-id %llu scok %d result type %u len %u",
+        "func": "fe_adapter_send_tree_data",
+        "line": 1111,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XBQ01-YM8H1": [
+      {
+        "args": "__func__, msg->refer_id, msg->req_id, msg->code, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: unknown native message session-id %llu req-id %llu code %u to FE adapter %s",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1720,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "XBWPX-A491T": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: adapter %s: session-id %llu received GET_DATA message",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1709,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XCH97-567K3": [
+      {
+        "args": "__func__, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending SETCFG_REPLY message to MGMTD Frontend client '%s'",
+        "func": "fe_adapter_send_set_cfg_reply",
+        "line": 394,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XDQB7-YNV74": [
+      {
+        "args": "__func__, fe_msg->register_req->client_name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got REGISTER_REQ from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 952,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XDT2D-XFFR3": [
+      {
+        "args": "__func__, mgmt_be_client_id2name(id)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Sent get-tree req to backend client %s",
+        "func": "mgmt_txn_send_get_tree_oper",
+        "line": 2527,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XEHB1-7NY2T": [
+      {
+        "args": "__func__, txn->txn_id, mgmt_txn_commit_phase_str(txn)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Move entire txn-id: %llu to phase '%s'",
+        "func": "mgmt_try_move_commit_to_next_phase",
+        "line": 871,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XFZNM-TN771": [
+      {
+        "args": "__func__, txn_req->req_id, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "TXN: %s: Added a new GETCFG req-id: %llu txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_req_alloc",
+        "line": 424,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XHXSW-WV9XT": [
+      {
+        "args": "__func__, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created new show txn-id: %llu for session-id: %llu",
+        "func": "fe_adapter_handle_get_data",
+        "line": 1414,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Created new show txn-id: %llu for session-id: %llu",
+        "func": "mgmt_fe_session_handle_get_req_msg",
+        "line": 819,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XK377-KY0PR": [
+      {
+        "args": "__func__, len, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Failed to decode %zu bytes for adapter: %s",
+        "func": "mgmt_be_adapter_process_msg",
+        "line": 772,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XRF1S-NHC8W": [
+      {
+        "args": "__func__",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: Corrupt notify msg",
+        "func": "mgmt_fe_adapter_send_notify",
+        "line": 1771,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "XWA23-G5G71": [
+      {
+        "args": "__func__, fe_msg->session_req->client_conn_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got SESSION_REQ (create) for client-id %llu from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 966,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "XXY7B-TYW7F": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: GETTREE reply from %s for txn-id %llu req_id %llu error merging result",
+        "func": "mgmt_txn_notify_tree_data_reply",
+        "line": 2779,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Y6Z6G-D29PM": [
+      {
+        "args": "__func__, session->session_id, session->client_id, session->adapter ? session->adapter->name : \"NULL\"",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: found orphaned session id %llu client id %llu adapter %s",
+        "func": "mgmt_fe_abort_if_session",
+        "line": 1856,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "Y7KWV-MFF8S": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: RPC reply from %s for txn-id %llu missing req_id %llu",
+        "func": "mgmt_txn_notify_rpc_reply",
+        "line": 2824,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YG8PT-C4HKP": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id, msg->code",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: adapter %s: recv msg refer-id %llu unknown message type %u",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1669,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YHVWM-7T9N3": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Error reply from %s for txn-id %llu cannot find req_id %llu",
+        "func": "mgmt_txn_notify_error",
+        "line": 2682,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YMS9B-W1KAY": [
+      {
+        "args": "__func__, session->cfg_txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Config txn-id: %llu for session-id: %llu already created",
+        "func": "mgmt_fe_session_handle_setcfg_req_msg",
+        "line": 752,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YN8Q1-762H1": [
+      {
+        "args": "__func__, adapter->name, txn_id, req_id, data_msg->result_type",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: GETTREE reply from %s for txn-id %llu req_id %llu error parsing result of type %u",
+        "func": "mgmt_txn_notify_tree_data_reply",
+        "line": 2766,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YP62F-3FR3B": [
+      {
+        "args": "__func__, (((be_rpc_xpath_map) == ((void *)0)) ? 0 : (((struct darr_metadata *)(be_rpc_xpath_map)) - 1)->len)",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "BE-ADAPTER: %s: Total RPC XPath Maps: %u",
+        "func": "mgmt_be_xpath_map_init",
+        "line": 324,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YPH10-JEW48": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to send SET_CONFIG_REPLY txn-id %llu session-id: %llu",
+        "func": "mgmt_txn_process_set_cfg",
+        "line": 667,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YRR67-CG3FH": [
+      {
+        "args": "__func__, txn->txn_id, req_id, rpc->result_type",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Error sending the results of RPC for txn-id %llu req_id %llu to requested type %u",
+        "func": "txn_rpc_done",
+        "line": 1363,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YS7WT-5ZBCK": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_be_adapter.c",
+        "fmtstring": "cannot initialize backend server",
+        "func": "mgmt_be_adapter_init",
+        "line": 863,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YSTP1-7AQS6": [
+      {
+        "args": "__func__, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Sending SESSION_REPLY message to MGMTD Frontend client '%s'",
+        "func": "fe_adapter_send_session_reply",
+        "line": 330,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YW5KA-MN0GN": [
+      {
+        "args": "__func__, session->cfg_txn_id, txn_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: txn-id doesn't match, session txn-id is %llu current txnid: %llu",
+        "func": "mgmt_fe_send_set_cfg_reply",
+        "line": 1924,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YX1RZ-XSSSS": [
+      {
+        "args": "__func__, mgmt_ds_id2name(ds_ctx->ds_id), ds_ctx->vty_session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "%s: WARNING: unlock on unlocked in DS:%s last session-id %llu",
+        "func": "mgmt_ds_unlock",
+        "line": 247,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "YXJ4E-10N3X": [
+      {
+        "args": "__func__, txn->txn_id, txn->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_txn.c",
+        "fmtstring": "%s: ERROR: Failed to send COMMIT-CONFIG-REPLY txn-id: %llu session-id: %llu",
+        "func": "mgmt_txn_send_commit_cfg_reply",
+        "line": 719,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YXMPE-NQ8NE": [
+      {
+        "args": "__func__, xpath, session->txn_id, session->session_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: No backends implement xpath: %s for txn-id: %llu session-id: %llu",
+        "func": "fe_adapter_handle_rpc",
+        "line": 1624,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YYKNC-EVYS9": [
+      {
+        "args": "",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_history.c",
+        "fmtstring": "Failed to write full commit history, removing file",
+        "func": "mgmt_history_dump_cmt_record_index",
+        "line": 183,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZAKMM-YM378": [
+      {
+        "args": "__func__, session->session_id, client_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Found session-id %llu using client-id %llu",
+        "func": "mgmt_fe_find_session_by_client_id",
+        "line": 207,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZCZ7H-PJ4DK": [
+      {
+        "args": "__func__, mgmt_ds_id2name(ds_id), session->session_id, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Unlocked DS:%s write-locked earlier by session-id: %llu from %s",
+        "func": "mgmt_fe_session_unlock_ds",
+        "line": 109,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZFF5K-SD8S0": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: adapter %s: session-id %llu received SESSION_REQ message",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1681,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZM5NE-F8TRN": [
+      {
+        "args": "__func__, lysc_path(base_dnode->schema, LYSC_PATH_LOG, xpath, sizeof(xpath))",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "DS: %s:            search base schema: '%s'",
+        "func": "mgmt_walk_ds_nodes",
+        "line": 313,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZPK84-42C5B": [
+      {
+        "args": "__func__, file_path",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_ds.c",
+        "fmtstring": "%s: ERROR: Failed to load config from the file %s",
+        "func": "mgmt_ds_load_config_from_file",
+        "line": 410,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZR088-EG7T5": [
+      {
+        "args": "__func__, adapter->name, msg->refer_id, msg_len, min_size, msg->code",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: ERROR: adapter %s: recv msg refer-id %llu short (%zu<%zu) msg for type %u",
+        "func": "fe_adapter_handle_native_msg",
+        "line": 1673,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "ZTPQ1-Z2TB2": [
+      {
+        "args": "__func__, (int)fe_msg->setcfg_req->n_data, fe_msg->setcfg_req->implicit_commit ? 'T' : 'F', mgmt_ds_id2name(fe_msg->setcfg_req->ds_id), fe_msg->setcfg_req->session_id, adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Got SETCFG_REQ (%d Xpaths, Implicit:%c) on DS:%s for session-id %llu from '%s'",
+        "func": "mgmt_fe_adapter_handle_msg",
+        "line": 1005,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZW0E2-TDBY4": [
+      {
+        "args": "__func__, mgmt_ds_id2name(ds_id), session->session_id, session->adapter->name",
+        "binary": "mgmtd/mgmtd",
+        "file": "mgmtd/mgmt_fe_adapter.c",
+        "fmtstring": "FE-ADAPTER: %s: Write-Locked the DS:%s for session-id: %llu from %s",
+        "func": "mgmt_fe_session_write_lock_ds",
+        "line": 90,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ]
+  }
+}

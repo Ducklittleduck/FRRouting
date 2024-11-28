@@ -1,0 +1,29 @@
+{
+  "cli": {},
+  "refs": {
+    "XJ6SE-9B6VX": [
+      {
+        "args": "__func__, lsalen, OSPF_MAX_LSA_SIZE",
+        "binary": "ospfclient/libfrrospfapiclient.la",
+        "ec": 134217742,
+        "file": "ospfclient/ospf_apiclient.c",
+        "fmtstring": "%s: message received size: %d is greater than a LSA size: %d",
+        "func": "ospf_apiclient_handle_lsa_delete",
+        "line": 602,
+        "priority": 4,
+        "type": "logmsg"
+      },
+      {
+        "args": "__func__, lsalen, OSPF_MAX_LSA_SIZE",
+        "binary": "ospfclient/libfrrospfapiclient.la",
+        "ec": 134217742,
+        "file": "ospfclient/ospf_apiclient.c",
+        "fmtstring": "%s: message received size: %d is greater than a LSA size: %d",
+        "func": "ospf_apiclient_handle_lsa_update",
+        "line": 567,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ]
+  }
+}

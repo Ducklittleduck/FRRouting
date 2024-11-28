@@ -1,0 +1,4084 @@
+{
+  "cli": {
+    "bandwidth_if_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "bandwidth_if",
+          "line": 195
+        },
+        "doc": "Negate a command or set its defaults\nSet bandwidth informational parameter\nBandwidth in megabits\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2915
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] bandwidth ![(1-1000000)]$bw"
+      }
+    },
+    "clear_ip_rip_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "clear_ip_rip",
+          "line": 1239
+        },
+        "doc": "Reset functions\nIP information\nClear IP RIP database\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1315
+            },
+            "node": 3
+          }
+        ],
+        "string": "clear ip rip [vrf WORD]"
+      }
+    },
+    "clear_ipv6_rip_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "clear_ipv6_rip",
+          "line": 630
+        },
+        "doc": "Reset functions\nIPv6 information\nClear IPv6 RIP database\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 683
+            },
+            "node": 3
+          }
+        ],
+        "string": "clear ipv6 ripng [vrf WORD]"
+      }
+    },
+    "exit_link_params_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 9,
+        "attrs": [
+          "yang",
+          "nosh"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "exit_link_params",
+          "line": 244
+        },
+        "doc": "Exit from Link Params configuration mode\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2938
+            },
+            "node": 85
+          }
+        ],
+        "string": "exit-link-params"
+      }
+    },
+    "ip_address_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_address",
+          "line": 793
+        },
+        "doc": "Negate a command or set its defaults\nInterface Internet Protocol config commands\nSet the IP address of an interface\nIP address (e.g. 10.0.0.1/8)\nLabel of this address\nLabel\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2916
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip address A.B.C.D/M [label LINE$label]"
+      }
+    },
+    "ip_address_peer_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_address_peer",
+          "line": 859
+        },
+        "doc": "Negate a command or set its defaults\nInterface Internet Protocol config commands\nSet the IP address of an interface\nLocal IP (e.g. 10.0.0.1) for P-t-P address\nSpecify P-t-P address\nPeer IP address (e.g. 10.0.0.1/8)\nLabel of this address\nLabel\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2917
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip address A.B.C.D peer A.B.C.D/M [label LINE$label]"
+      }
+    },
+    "ip_mroute_dist_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_mroute_dist",
+          "line": 478
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nConfigure static unicast route into MRIB for multicast RPF lookup\nIP destination prefix (e.g. 10.0.0.0/8)\nNexthop address\nNexthop interface name\nDistance\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1657
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip mroute A.B.C.D/M$prefix <A.B.C.D$gate|INTERFACE$ifname> [{(1-255)$distance|bfd$bfd [{multi-hop$bfd_multi_hop|source A.B.C.D$bfd_source|profile BFDPROF$bfd_profile}]}]"
+      }
+    },
+    "ip_nht_default_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_nht_default_route",
+          "line": 2160
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nFilter Next Hop tracking route resolution\nResolve via default route\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2992
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2990
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip nht resolve-via-default"
+      }
+    },
+    "ip_protocol_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_protocol",
+          "line": 1986
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nFilter routing info exchanged between zebra and protocol\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol (RIP)\nOpen Shortest Path First (OSPFv2)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nEnhanced Interior Gateway Routing Protocol (EIGRP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nAny of the above protocols\nSpecify route-map\nRoute map name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2981
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2980
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip protocol <kernel|connected|local|static|rip|ospf|isis|bgp|eigrp|table|vnc|babel|openfabric|table-direct|any> $proto ![route-map ROUTE-MAP$rmap]"
+      }
+    },
+    "ip_protocol_nht_rmap_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_protocol_nht_rmap",
+          "line": 2073
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nFilter Next Hop tracking route resolution\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol (RIP)\nOpen Shortest Path First (OSPFv2)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nEnhanced Interior Gateway Routing Protocol (EIGRP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nAny of the above protocols\nSpecify route map\nRoute map name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2985
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2984
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip nht <kernel|connected|local|static|rip|ospf|isis|bgp|eigrp|table|vnc|babel|openfabric|table-direct|any> $proto ![route-map ROUTE-MAP$rmap]"
+      }
+    },
+    "ip_rip_authentication_key_chain_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_authentication_key_chain",
+          "line": 1022
+        },
+        "doc": "IP information\nRouting Information Protocol\nAuthentication control\nAuthentication key-chain\nname of key-chain\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1308
+            },
+            "node": 21
+          }
+        ],
+        "string": "ip rip authentication key-chain LINE$keychain"
+      }
+    },
+    "ip_rip_authentication_mode_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_authentication_mode",
+          "line": 884
+        },
+        "doc": "IP information\nRouting Information Protocol\nAuthentication control\nAuthentication mode\nKeyed message digest\nMD5 authentication data length\nRFC compatible\nOld ripd compatible\nClear text authentication\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1304
+            },
+            "node": 21
+          }
+        ],
+        "string": "ip rip authentication mode <md5$mode [auth-length <rfc|old-ripd>$auth_length]|text$mode>"
+      }
+    },
+    "ip_rip_authentication_string_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_authentication_string",
+          "line": 967
+        },
+        "doc": "IP information\nRouting Information Protocol\nAuthentication control\nAuthentication string\nAuthentication string\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1306
+            },
+            "node": 21
+          }
+        ],
+        "string": "ip rip authentication string LINE$password"
+      }
+    },
+    "ip_rip_bfd_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_bfd",
+          "line": 1071
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nEnable BFD support\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1311
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip rip bfd"
+      }
+    },
+    "ip_rip_bfd_profile_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_bfd_profile",
+          "line": 1091
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nEnable BFD support\nUse a pre-configured profile\nProfile name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1312
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip rip bfd profile BFDPROF$profile"
+      }
+    },
+    "ip_rip_receive_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_receive_version",
+          "line": 745
+        },
+        "doc": "IP information\nRouting Information Protocol\nAdvertisement reception\nVersion control\nRIP version 1\nRIP version 2\nNone\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1300
+            },
+            "node": 21
+          }
+        ],
+        "string": "ip rip receive version <{1$v1|2$v2}|none>"
+      }
+    },
+    "ip_rip_send_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_send_version",
+          "line": 815
+        },
+        "doc": "IP information\nRouting Information Protocol\nAdvertisement transmission\nVersion control\nRIP version 1\nRIP version 2\nNone\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1302
+            },
+            "node": 21
+          }
+        ],
+        "string": "ip rip send version <{1$v1|2$v2}|none>"
+      }
+    },
+    "ip_rip_split_horizon_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_split_horizon",
+          "line": 673
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nPerform split horizon\nWith poisoned-reverse\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1298
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip rip split-horizon [poisoned-reverse$poisoned_reverse]"
+      }
+    },
+    "ip_rip_v2_broadcast_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "ip_rip_v2_broadcast",
+          "line": 719
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nSend ip broadcast v2 update\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1299
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ip rip v2-broadcast"
+      }
+    },
+    "ip_route_address_interface_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route_address_interface",
+          "line": 609
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nIP gateway address\nIP gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this route\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nTreat the nexthop as directly attached to the interface\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1661
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask> \tA.B.C.D$gate                                   \t<INTERFACE|Null0>$ifname                       \t[{                                             \t  tag (1-4294967295)                           \t  |(1-255)$distance                            \t  |vrf NAME                                    \t  |label WORD                                  \t  |table (1-4294967295)                        \t  |nexthop-vrf NAME                            \t  |onlink$onlink                               \t  |color (1-4294967295)                        \t  |bfd$bfd [{multi-hop$bfd_multi_hop|source A.B.C.D$bfd_source|profile BFDPROF$bfd_profile}]           }]"
+      }
+    },
+    "ip_route_address_interface_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route_address_interface_vrf",
+          "line": 677
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nIP gateway address\nIP gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this route\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nTreat the nexthop as directly attached to the interface\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1662
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask> \tA.B.C.D$gate                                   \t<INTERFACE|Null0>$ifname                       \t[{                                             \t  tag (1-4294967295)                           \t  |(1-255)$distance                            \t  |label WORD                                  \t  |table (1-4294967295)                        \t  |nexthop-vrf NAME                            \t  |onlink$onlink                               \t  |color (1-4294967295)                        \t  |bfd$bfd [{multi-hop$bfd_multi_hop|source A.B.C.D$bfd_source|profile BFDPROF$bfd_profile}] \t  }]"
+      }
+    },
+    "ip_route_blackhole_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route_blackhole",
+          "line": 516
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nEmit an ICMP unreachable when matched\nSilently discard pkts when matched\nSet tag for this route\nTag value\nDistance value for this route\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1659
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask>                        \t<reject|blackhole>$flag                                               \t[{                                                                    \t  tag (1-4294967295)                                                  \t  |(1-255)$distance                                                   \t  |vrf NAME                                                           \t  |label WORD                                                                   |table (1-4294967295)                                                         }]"
+      }
+    },
+    "ip_route_blackhole_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route_blackhole_vrf",
+          "line": 560
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nEmit an ICMP unreachable when matched\nSilently discard pkts when matched\nSet tag for this route\nTag value\nDistance value for this route\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1660
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask>                        \t<reject|blackhole>$flag                                               \t[{                                                                    \t  tag (1-4294967295)                                                  \t  |(1-255)$distance                                                   \t  |label WORD                                                         \t  |table (1-4294967295)                                                         }]"
+      }
+    },
+    "ip_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route",
+          "line": 743
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nIP gateway address\nIP gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this route\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1663
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask> \t<A.B.C.D$gate|<INTERFACE|Null0>$ifname>        \t[{                                             \t  tag (1-4294967295)                           \t  |(1-255)$distance                            \t  |vrf NAME                                    \t  |label WORD                                  \t  |table (1-4294967295)                        \t  |nexthop-vrf NAME                            \t  |color (1-4294967295)                        \t  |bfd$bfd [{multi-hop$bfd_multi_hop|source A.B.C.D$bfd_source|profile BFDPROF$bfd_profile}]           }]"
+      }
+    },
+    "ip_route_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ip_route_vrf",
+          "line": 807
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nEstablish static routes\nIP destination prefix (e.g. 10.0.0.0/8)\nIP destination prefix\nIP destination prefix mask\nIP gateway address\nIP gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this route\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1664
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ip route\t<A.B.C.D/M$prefix|A.B.C.D$prefix A.B.C.D$mask> \t<A.B.C.D$gate|<INTERFACE|Null0>$ifname>        \t[{                                             \t  tag (1-4294967295)                           \t  |(1-255)$distance                            \t  |label WORD                                  \t  |table (1-4294967295)                        \t  |nexthop-vrf NAME                            \t  |color (1-4294967295)                        \t  |bfd$bfd [{multi-hop$bfd_multi_hop|source A.B.C.D$bfd_source|profile BFDPROF$bfd_profile}]           }]"
+      }
+    },
+    "ip_router_id_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_router_id",
+          "line": 1869
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nManually set the router-id\nIP address to use for router-id\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2970
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip router-id A.B.C.D$id vrf NAME"
+      }
+    },
+    "ip_router_id_in_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_router_id_in_vrf",
+          "line": 1913
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nManually set the router-id\nIP address to use for router-id\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2976
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2973
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip router-id ![A.B.C.D$id]"
+      }
+    },
+    "ip_table_range_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_table_range",
+          "line": 2268
+        },
+        "doc": "Negate a command or set its defaults\nIP information\ntable configuration\nConfigure table range\nStart Routing Table\nEnd Routing Table\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3005
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3004
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ip table range ![(1-4294967295)$start (1-4294967295)$end]"
+      }
+    },
+    "ipv6_address_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_address",
+          "line": 932
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nSet the IP address of an interface\nIPv6 address (e.g. 3ffe:506::1/48)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2918
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 address X:X::X:X/M"
+      }
+    },
+    "ipv6_nd_adv_interval_config_option_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_adv_interval_config_option",
+          "line": 1480
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nAdvertisement Interval Option\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2959
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd adv-interval-option"
+      }
+    },
+    "ipv6_nd_dnssl_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_dnssl",
+          "line": 1759
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nDNS search list information\nDomain name suffix\nValid lifetime in seconds\nInfinite valid lifetime\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2964
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd dnssl SUFFIX [<(0-4294967295)|infinite>]$lifetime"
+      }
+    },
+    "ipv6_nd_homeagent_config_flag_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_homeagent_config_flag",
+          "line": 1449
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nHome Agent configuration flag\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2956
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd home-agent-config-flag"
+      }
+    },
+    "ipv6_nd_homeagent_lifetime_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_homeagent_lifetime",
+          "line": 1390
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nHome Agent lifetime\nHome Agent lifetime in seconds\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2958
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd home-agent-lifetime ![(1-65520)$lifetime]"
+      }
+    },
+    "ipv6_nd_homeagent_preference_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_homeagent_preference",
+          "line": 1360
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nHome Agent preference\npreference value (default is 0, least preferred)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2957
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd home-agent-preference ![(0-65535)$pref]"
+      }
+    },
+    "ipv6_nd_managed_config_flag_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_managed_config_flag",
+          "line": 1419
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nManaged address configuration flag\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2954
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd managed-config-flag"
+      }
+    },
+    "ipv6_nd_mtu_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_mtu",
+          "line": 1680
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nAdvertised MTU\nMTU in bytes\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2962
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd mtu ![(1-65535)]"
+      }
+    },
+    "ipv6_nd_other_config_flag_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_other_config_flag",
+          "line": 1511
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nOther statefull configuration flag\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2955
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd other-config-flag"
+      }
+    },
+    "ipv6_nd_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_prefix",
+          "line": 1542
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nPrefix information\nIPv6 prefix\nValid lifetime in seconds\nInfinite valid lifetime\nPreferred lifetime in seconds\nInfinite preferred lifetime\nSet Router Address flag\nDo not use prefix for onlink determination\nDo not use prefix for autoconfiguration\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2960
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd prefix X:X::X:X/M$prefix [<(0-4294967295)|infinite>$valid <(0-4294967295)|infinite>$preferred] [{router-address$routeraddr|off-link$offlink|no-autoconfig$noautoconf}]"
+      }
+    },
+    "ipv6_nd_ra_fast_retrans_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_ra_fast_retrans",
+          "line": 1138
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nFast retransmit of RA packets\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2947
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd ra-fast-retrans"
+      }
+    },
+    "ipv6_nd_ra_hop_limit_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_ra_hop_limit",
+          "line": 1169
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nAdvertisement Hop Limit\nAdvertisement Hop Limit in hops (default:64)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2949
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd ra-hop-limit ![(0-255)$hopcount]"
+      }
+    },
+    "ipv6_nd_ra_interval_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_ra_interval",
+          "line": 1258
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nRouter Advertisement interval\nRouter Advertisement interval in seconds\nRouter Advertisement interval in milliseconds\nRouter Advertisement interval in milliseconds\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2951
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd ra-interval ![<(1-1800)$sec|msec (70-1800000)$msec>]"
+      }
+    },
+    "ipv6_nd_ra_lifetime_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_ra_lifetime",
+          "line": 1302
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nRouter lifetime\nRouter lifetime in seconds (0 stands for a non-default gw)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2952
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd ra-lifetime ![(0-9000)$lifetime]"
+      }
+    },
+    "ipv6_nd_ra_retrans_interval_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_ra_retrans_interval",
+          "line": 1198
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nAdvertisement Retransmit Interval\nAdvertisement Retransmit Interval in msec\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2948
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd ra-retrans-interval ![(0-4294967295)$interval]"
+      }
+    },
+    "ipv6_nd_rdnss_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_rdnss",
+          "line": 1708
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nRecursive DNS server information\nIPv6 address\nValid lifetime in seconds\nInfinite valid lifetime\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2963
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd rdnss X:X::X:X$addr [<(0-4294967295)|infinite>]$lifetime"
+      }
+    },
+    "ipv6_nd_reachable_time_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_reachable_time",
+          "line": 1331
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nReachable time\nReachable time in milliseconds\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2953
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd reachable-time ![(1-3600000)$msec]"
+      }
+    },
+    "ipv6_nd_router_preference_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_router_preference",
+          "line": 1647
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nDefault router preference\nHigh default router preference\nMedium default router preference (default)\nLow default router preference\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2961
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd router-preference ![<high|medium|low>$pref]"
+      }
+    },
+    "ipv6_nd_suppress_ra_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nd_suppress_ra",
+          "line": 1227
+        },
+        "doc": "Negate a command or set its defaults\nInterface IPv6 config commands\nNeighbor discovery\nSuppress Router Advertisement\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2950
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 nd suppress-ra"
+      }
+    },
+    "ipv6_nht_default_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_nht_default_route",
+          "line": 2192
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 Information\nFilter Next Hop tracking route resolution\nResolve via default route\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2993
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2991
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 nht resolve-via-default"
+      }
+    },
+    "ipv6_protocol_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_protocol",
+          "line": 2018
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 Information\nFilter IPv6 routing info exchanged between zebra and protocol\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol next-generation (IPv6) (RIPng)\nOpen Shortest Path First (IPv6) (OSPFv3)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nAny of the above protocols\nSpecify route-map\nRoute map name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2983
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2982
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 protocol <kernel|connected|local|static|ripng|ospf6|isis|bgp|table|vnc|babel|openfabric|table-direct|any> $proto ![route-map ROUTE-MAP$rmap]"
+      }
+    },
+    "ipv6_protocol_nht_rmap_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_protocol_nht_rmap",
+          "line": 2105
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 Information\nFilter Next Hop tracking route resolution\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol next-generation (IPv6) (RIPng)\nOpen Shortest Path First (IPv6) (OSPFv3)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nAny of the above protocols\nSpecify route map\nRoute map name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2987
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2986
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 nht <kernel|connected|local|static|ripng|ospf6|isis|bgp|table|vnc|babel|openfabric|table-direct|any> $proto ![route-map ROUTE-MAP$rmap]"
+      }
+    },
+    "ipv6_ripng_split_horizon_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ipv6_ripng_split_horizon",
+          "line": 472
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nRouting Information Protocol\nPerform split horizon\nWith poisoned-reverse\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 681
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] ipv6 ripng split-horizon [poisoned-reverse$poisoned_reverse]"
+      }
+    },
+    "ipv6_route_address_interface_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route_address_interface",
+          "line": 962
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nIPv6 gateway address\nIPv6 gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nTreat the nexthop as directly attached to the interface\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\nValue of segs\nSegs (SIDs)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1668
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           X:X::X:X$gate                                              <INTERFACE|Null0>$ifname                                   [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |vrf NAME                                                  |label WORD                                    \t    |table (1-4294967295)                                      |nexthop-vrf NAME                              \t    |onlink$onlink                                 \t    |color (1-4294967295)                          \t    |bfd$bfd [{multi-hop$bfd_multi_hop|source X:X::X:X$bfd_source|profile BFDPROF$bfd_profile}] \t\t|segments WORD \t\t\t\t\t\t\t\t             }]"
+      }
+    },
+    "ipv6_route_address_interface_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route_address_interface_vrf",
+          "line": 1025
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nIPv6 gateway address\nIPv6 gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nTreat the nexthop as directly attached to the interface\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\nValue of segs\nSegs (SIDs)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1669
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           X:X::X:X$gate                                              <INTERFACE|Null0>$ifname                                   [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |label WORD                                    \t    |table (1-4294967295)                                      |nexthop-vrf NAME                              \t    |onlink$onlink                                 \t    |color (1-4294967295)                          \t    |bfd$bfd [{multi-hop$bfd_multi_hop|source X:X::X:X$bfd_source|profile BFDPROF$bfd_profile}] \t\t|segments WORD \t\t\t\t\t\t\t\t             }]"
+      }
+    },
+    "ipv6_route_blackhole_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route_blackhole",
+          "line": 869
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nEmit an ICMP unreachable when matched\nSilently discard pkts when matched\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1666
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           <reject|blackhole>$flag                                    [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |vrf NAME                                                  |label WORD                                                |table (1-4294967295)                                    }]"
+      }
+    },
+    "ipv6_route_blackhole_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route_blackhole_vrf",
+          "line": 913
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nEmit an ICMP unreachable when matched\nSilently discard pkts when matched\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1667
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           <reject|blackhole>$flag                                    [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |label WORD                                                |table (1-4294967295)                                    }]"
+      }
+    },
+    "ipv6_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route",
+          "line": 1088
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nIPv6 gateway address\nIPv6 gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify the VRF\nThe VRF name\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\nValue of segs\nSegs (SIDs)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1670
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           <X:X::X:X$gate|<INTERFACE|Null0>$ifname>                   [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |vrf NAME                                                  |label WORD                                    \t    |table (1-4294967295)                                      |nexthop-vrf NAME                                          |color (1-4294967295)                          \t    |bfd$bfd [{multi-hop$bfd_multi_hop|source X:X::X:X$bfd_source|profile BFDPROF$bfd_profile}] \t\t\t|segments WORD \t\t\t\t\t\t\t\t             }]"
+      }
+    },
+    "ipv6_route_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "staticd/static_vty.c",
+          "func": "ipv6_route_vrf",
+          "line": 1147
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nEstablish static routes\nIPv6 destination prefix (e.g. 3ffe:506::/32)\nIPv6 source-dest route\nIPv6 source prefix\nIPv6 gateway address\nIPv6 gateway interface name\nNull interface\nSet tag for this route\nTag value\nDistance value for this prefix\nSpecify label(s) for this route\nOne or more labels in the range (16-1048575) separated by '/'\nTable to configure\nThe table number to configure\nSpecify the VRF\nThe VRF name\nSR-TE color\nThe SR-TE color to configure\nBFD monitoring\nUse BFD multi hop session\nUse source for BFD session\nUse IPv4 source for BFD session\nBFD profile.\nBFD profile name.\nValue of segs\nSegs (SIDs)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "staticd/static_vty.c",
+              "func": "static_vty_init",
+              "line": 1671
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] ipv6 route X:X::X:X/M$prefix [from X:X::X:X/M]           <X:X::X:X$gate|<INTERFACE|Null0>$ifname>                           [{                                                           tag (1-4294967295)                                         |(1-255)$distance                                          |label WORD                                    \t    |table (1-4294967295)                                      |nexthop-vrf NAME                              \t    |color (1-4294967295)                          \t    |bfd$bfd [{multi-hop$bfd_multi_hop|source X:X::X:X$bfd_source|profile BFDPROF$bfd_profile}] \t\t|segments WORD \t\t\t\t\t\t\t\t             }]"
+      }
+    },
+    "ipv6_router_id_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_router_id",
+          "line": 1895
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 information\nManually set the router-id\nIPv6 address to use for router-id\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2972
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 router-id X:X::X:X$id vrf NAME"
+      }
+    },
+    "ipv6_router_id_in_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ipv6_router_id_in_vrf",
+          "line": 1942
+        },
+        "doc": "Negate a command or set its defaults\nIPv6 Information\nManually set the IPv6 router-id\nIPV6 address to use for router-id\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2978
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2975
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] ipv6 router-id ![X:X::X:X$id]"
+      }
+    },
+    "link_params_admin_grp_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_admin_grp",
+          "line": 429
+        },
+        "doc": "Negate a command or set its defaults\nAdministrative group membership\n32-bit Hexadecimal value (e.g. 0xa1)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2928
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] admin-grp ![BITPATTERN]"
+      }
+    },
+    "link_params_affinity_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_affinity",
+          "line": 725
+        },
+        "doc": "Negate a command or set its defaults\nInterface affinities\nAffinity names\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2936
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] affinity NAME..."
+      }
+    },
+    "link_params_affinity_mode_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_affinity_mode",
+          "line": 761
+        },
+        "doc": "Negate a command or set its defaults\nInterface affinity mode\nStandard Admin-Group only RFC3630,5305,5329\nExtended Admin-Group only RFC7308 (default)\nStandard and extended Admin-Group format\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2937
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] affinity-mode ![<standard|extended|both>$mode]"
+      }
+    },
+    "link_params_ava_bw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_ava_bw",
+          "line": 647
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Available Bandwidth\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2933
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] ava-bw ![BANDWIDTH]"
+      }
+    },
+    "link_params_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 9,
+        "attrs": [
+          "yang",
+          "nosh"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params",
+          "line": 221
+        },
+        "doc": "Configure interface link parameters\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2919
+            },
+            "node": 21
+          }
+        ],
+        "string": "link-params"
+      }
+    },
+    "link_params_delay_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_delay",
+          "line": 505
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Average Link Delay\nAverage delay in micro-second as decimal (0...16777215)\nMinimum delay\nMinimum delay in micro-second as decimal (0...16777215)\nMaximum delay\nMaximum delay in micro-second as decimal (0...16777215)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2930
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] delay ![(0-16777215)$delay [min (0-16777215)$min max (0-16777215)$max]]"
+      }
+    },
+    "link_params_delay_var_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_delay_var",
+          "line": 559
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Link Delay Variation\ndelay variation in micro-second as decimal (0...16777215)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2931
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] delay-variation ![(0-16777215)$delay_var]"
+      }
+    },
+    "link_params_enable_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 3,
+        "attrs": [
+          "yang",
+          "hidden"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_enable",
+          "line": 279
+        },
+        "doc": "Activate link parameters on this interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2922
+            },
+            "node": 85
+          }
+        ],
+        "string": "enable"
+      }
+    },
+    "link_params_inter_as_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_inter_as",
+          "line": 472
+        },
+        "doc": "Negate a command or set its defaults\nConfigure remote ASBR information (Neighbor IP address and AS number)\nRemote IP address in dot decimal A.B.C.D\nRemote AS number\nAS number in the range <1-4294967295>\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2929
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] neighbor ![A.B.C.D$ip as (1-4294967295)$as]"
+      }
+    },
+    "link_params_max_rsv_bw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_max_rsv_bw",
+          "line": 360
+        },
+        "doc": "Maximum bandwidth that may be reserved\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2926
+            },
+            "node": 85
+          }
+        ],
+        "string": "max-rsv-bw BANDWIDTH"
+      }
+    },
+    "link_params_maxbw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_maxbw",
+          "line": 331
+        },
+        "doc": "Maximum bandwidth that can be used\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2925
+            },
+            "node": 85
+          }
+        ],
+        "string": "max-bw BANDWIDTH"
+      }
+    },
+    "link_params_metric_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_metric",
+          "line": 308
+        },
+        "doc": "Negate a command or set its defaults\nLink metric for MPLS-TE purpose\nMetric value in decimal\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2924
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] metric ![(0-4294967295)]$metric"
+      }
+    },
+    "link_params_pkt_loss_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_pkt_loss",
+          "line": 584
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Link Packet Loss\npercentage of total traffic by 0.000003% step and less than 50.331642%\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2932
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] packet-loss ![PERCENTAGE]"
+      }
+    },
+    "link_params_res_bw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_res_bw",
+          "line": 608
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Residual Bandwidth\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2934
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] res-bw ![BANDWIDTH]"
+      }
+    },
+    "link_params_unrsv_bw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_unrsv_bw",
+          "line": 391
+        },
+        "doc": "Unreserved bandwidth at each priority level\nPriority\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2927
+            },
+            "node": 85
+          }
+        ],
+        "string": "unrsv-bw (0-7)$priority BANDWIDTH"
+      }
+    },
+    "link_params_use_bw_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "link_params_use_bw",
+          "line": 686
+        },
+        "doc": "Negate a command or set its defaults\nUnidirectional Utilised Bandwidth\nBytes/second (IEEE floating point format)\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2935
+            },
+            "node": 85
+          }
+        ],
+        "string": "[no] use-bw ![BANDWIDTH]"
+      }
+    },
+    "linkdetect_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "linkdetect",
+          "line": 148
+        },
+        "doc": "Negate a command or set its defaults\nEnable link detection on interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2913
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] link-detect"
+      }
+    },
+    "match_ip_address_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "match_ip_address_prefix_len",
+          "line": 2389
+        },
+        "doc": "Match values from routing table\nIP information\nMatch prefix length of IP address\nMatch prefix length of IP address\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3011
+            },
+            "node": 7
+          }
+        ],
+        "string": "match ip address prefix-len (0-32)$length"
+      }
+    },
+    "match_ip_nexthop_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "match_ip_nexthop_prefix_len",
+          "line": 2471
+        },
+        "doc": "Match values from routing table\nIP information\nMatch prefixlen of nexthop IP address\nMatch prefixlen of given nexthop\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3009
+            },
+            "node": 7
+          }
+        ],
+        "string": "match ip next-hop prefix-len (0-32)$length"
+      }
+    },
+    "match_ipv6_address_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "match_ipv6_address_prefix_len",
+          "line": 2430
+        },
+        "doc": "Match values from routing table\nIPv6 information\nMatch prefix length of IPv6 address\nMatch prefix length of IPv6 address\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3012
+            },
+            "node": 7
+          }
+        ],
+        "string": "match ipv6 address prefix-len (0-128)$length"
+      }
+    },
+    "match_source_instance_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "match_source_instance",
+          "line": 2548
+        },
+        "doc": "Match values from routing table\nMatch the protocol's instance number\nThe instance number\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3017
+            },
+            "node": 7
+          }
+        ],
+        "string": "match source-instance (0-255)$instance"
+      }
+    },
+    "match_source_protocol_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "match_source_protocol",
+          "line": 2512
+        },
+        "doc": "Match values from routing table\nMatch protocol via which the route was learnt\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol (RIP)\nRouting Information Protocol next-generation (IPv6) (RIPng)\nOpen Shortest Path First (OSPFv2)\nOpen Shortest Path First (IPv6) (OSPFv3)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nEnhanced Interior Gateway Routing Protocol (EIGRP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3015
+            },
+            "node": 7
+          }
+        ],
+        "string": "match source-protocol <kernel|connected|local|static|rip|ripng|ospf|ospf6|isis|bgp|eigrp|table|vnc|babel|openfabric|table-direct>$proto"
+      }
+    },
+    "mpls_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "mpls",
+          "line": 118
+        },
+        "doc": "Negate a command or set its defaults\nMPLS information\nSet mpls to be on for the interface\nSet mpls to be off for the interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2912
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] mpls <enable$on|disable$off>"
+      }
+    },
+    "mpls_fec_nexthop_resolution_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "mpls_fec_nexthop_resolution",
+          "line": 2224
+        },
+        "doc": "Negate a command or set its defaults\nMPLS information\nMPLS FEC table\nAuthorise nexthop resolution over all labeled routes.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2996
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2995
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no$no] mpls fec nexthop-resolution"
+      }
+    },
+    "multicast_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 3,
+        "attrs": [
+          "yang",
+          "hidden"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "multicast",
+          "line": 106
+        },
+        "doc": "Negate a command or set its defaults\nSet multicast flag to interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2911
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] multicast"
+      }
+    },
+    "multicast_new_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "multicast_new",
+          "line": 74
+        },
+        "doc": "Negate a command or set its defaults\nControl multicast flag on interface\nSet multicast flag on interface\nUnset multicast flag on interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2910
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] multicast <enable$on|disable$off>"
+      }
+    },
+    "no_ip_rip_authentication_key_chain_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_authentication_key_chain",
+          "line": 1044
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nAuthentication control\nAuthentication key-chain\nname of key-chain\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1309
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip authentication key-chain [LINE]"
+      }
+    },
+    "no_ip_rip_authentication_mode_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_authentication_mode",
+          "line": 916
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nAuthentication control\nAuthentication mode\nKeyed message digest\nMD5 authentication data length\nRFC compatible\nOld ripd compatible\nClear text authentication\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1305
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip authentication mode [<md5 [auth-length <rfc|old-ripd>]|text>]"
+      }
+    },
+    "no_ip_rip_authentication_string_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_authentication_string",
+          "line": 995
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nAuthentication control\nAuthentication string\nAuthentication string\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1307
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip authentication string [LINE]"
+      }
+    },
+    "no_ip_rip_bfd_profile_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_bfd_profile",
+          "line": 1109
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nEnable BFD support\nUse a pre-configured profile\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1313
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip bfd profile"
+      }
+    },
+    "no_ip_rip_receive_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_receive_version",
+          "line": 772
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nAdvertisement reception\nVersion control\nRIP version 1\nRIP version 2\nNone\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1301
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip receive version [<{1|2}|none>]"
+      }
+    },
+    "no_ip_rip_send_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_ip_rip_send_version",
+          "line": 842
+        },
+        "doc": "Negate a command or set its defaults\nIP information\nRouting Information Protocol\nAdvertisement transmission\nVersion control\nRIP version 1\nRIP version 2\nNone\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1303
+            },
+            "node": 21
+          }
+        ],
+        "string": "no ip rip send version [<{1|2}|none>]"
+      }
+    },
+    "no_link_params_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_link_params",
+          "line": 266
+        },
+        "doc": "Negate a command or set its defaults\nConfigure interface link parameters\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2920
+            },
+            "node": 21
+          }
+        ],
+        "string": "no link-params"
+      }
+    },
+    "no_link_params_enable_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 9,
+        "attrs": [
+          "yang",
+          "nosh"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_link_params_enable",
+          "line": 289
+        },
+        "doc": "Negate a command or set its defaults\nDisable link parameters on this interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2923
+            },
+            "node": 85
+          }
+        ],
+        "string": "no enable"
+      }
+    },
+    "no_match_ip_address_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_match_ip_address_prefix_len",
+          "line": 2412
+        },
+        "doc": "Negate a command or set its defaults\nMatch values from routing table\nIP information\nMatch prefix length of IP address\nMatch prefix length of IP address\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3014
+            },
+            "node": 7
+          }
+        ],
+        "string": "no match ip address prefix-len [(0-32)]"
+      }
+    },
+    "no_match_ip_nexthop_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_match_ip_nexthop_prefix_len",
+          "line": 2494
+        },
+        "doc": "Negate a command or set its defaults\nMatch values from routing table\nIP information\nMatch prefixlen of nexthop IP address\nMatch prefix length of nexthop\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3010
+            },
+            "node": 7
+          }
+        ],
+        "string": "no match ip next-hop prefix-len [(0-32)]"
+      }
+    },
+    "no_match_ipv6_address_prefix_len_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_match_ipv6_address_prefix_len",
+          "line": 2453
+        },
+        "doc": "Negate a command or set its defaults\nMatch values from routing table\nIPv6 information\nMatch prefix length of IPv6 address\nMatch prefix length of IPv6 address\nPrefix length\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3013
+            },
+            "node": 7
+          }
+        ],
+        "string": "no match ipv6 address prefix-len [(0-128)]"
+      }
+    },
+    "no_match_source_instance_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_match_source_instance",
+          "line": 2568
+        },
+        "doc": "Negate a command or set its defaults\nMatch values from routing table\nMatch the protocol's instance number\nThe instance number\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3018
+            },
+            "node": 7
+          }
+        ],
+        "string": "no match source-instance [(0-255)]"
+      }
+    },
+    "no_match_source_protocol_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_match_source_protocol",
+          "line": 2532
+        },
+        "doc": "Negate a command or set its defaults\nMatch values from routing table\nMatch protocol via which the route was learnt\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nRouting Information Protocol (RIP)\nRouting Information Protocol next-generation (IPv6) (RIPng)\nOpen Shortest Path First (OSPFv2)\nOpen Shortest Path First (IPv6) (OSPFv3)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nEnhanced Interior Gateway Routing Protocol (EIGRP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3016
+            },
+            "node": 7
+          }
+        ],
+        "string": "no match source-protocol [<kernel|connected|local|static|rip|ripng|ospf|ospf6|isis|bgp|eigrp|table|vnc|babel|openfabric|table-direct>]"
+      }
+    },
+    "no_rip_allow_ecmp_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_allow_ecmp",
+          "line": 113
+        },
+        "doc": "Negate a command or set its defaults\nAllow Equal Cost MultiPath\nNumber of paths\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1275
+            },
+            "node": 24
+          }
+        ],
+        "string": "no allow-ecmp [(1-16)]"
+      }
+    },
+    "no_rip_bfd_default_profile_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_bfd_default_profile",
+          "line": 649
+        },
+        "doc": "Negate a command or set its defaults\nBidirectional Forwarding Detection\nBFD default profile\nProfile name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1295
+            },
+            "node": 24
+          }
+        ],
+        "string": "no bfd default-profile [BFDPROF]"
+      }
+    },
+    "no_rip_default_metric_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_default_metric",
+          "line": 179
+        },
+        "doc": "Negate a command or set its defaults\nSet a metric of redistribute routes\nDefault metric\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1278
+            },
+            "node": 24
+          }
+        ],
+        "string": "no default-metric [(1-16)]"
+      }
+    },
+    "no_rip_distance_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_distance",
+          "line": 213
+        },
+        "doc": "Negate a command or set its defaults\nAdministrative distance\nDistance value\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1280
+            },
+            "node": 24
+          }
+        ],
+        "string": "no distance [(1-255)]"
+      }
+    },
+    "no_rip_distribute_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_distribute_list",
+          "line": 1167
+        },
+        "doc": "Negate a command or set its defaults\nFilter networks in routing updates\nAccess-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1271
+            },
+            "node": 24
+          }
+        ],
+        "string": "no distribute-list [ACCESSLIST4_NAME$name] <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "no_rip_distribute_list_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_distribute_list_prefix",
+          "line": 1201
+        },
+        "doc": "Negate a command or set its defaults\nFilter networks in routing updates\nSpecify a prefix list\nPrefix-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1272
+            },
+            "node": 24
+          }
+        ],
+        "string": "no distribute-list prefix [PREFIXLIST4_NAME$name] <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "no_rip_timers_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_timers",
+          "line": 559
+        },
+        "doc": "Negate a command or set its defaults\nAdjust routing timers\nBasic routing protocol update timers\nRouting table update timer value in second. Default is 30.\nRouting information timeout timer. Default is 180.\nGarbage collection timer. Default is 120.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1291
+            },
+            "node": 24
+          }
+        ],
+        "string": "no timers basic [(5-2147483647) (5-2147483647) (5-2147483647)]"
+      }
+    },
+    "no_rip_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_rip_version",
+          "line": 601
+        },
+        "doc": "Negate a command or set its defaults\nSet routing protocol version\nversion\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1293
+            },
+            "node": 24
+          }
+        ],
+        "string": "no version [(1-2)]"
+      }
+    },
+    "no_ripng_allow_ecmp_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_ripng_allow_ecmp",
+          "line": 113
+        },
+        "doc": "Negate a command or set its defaults\nAllow Equal Cost MultiPath\nNumber of paths\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 667
+            },
+            "node": 25
+          }
+        ],
+        "string": "no allow-ecmp [(1-16)]"
+      }
+    },
+    "no_ripng_default_metric_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_ripng_default_metric",
+          "line": 178
+        },
+        "doc": "Negate a command or set its defaults\nSet a metric of redistribute routes\nDefault metric\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 670
+            },
+            "node": 25
+          }
+        ],
+        "string": "no default-metric [(1-16)]"
+      }
+    },
+    "no_ripng_ipv6_distribute_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_ripng_ipv6_distribute_list",
+          "line": 556
+        },
+        "doc": "Negate a command or set its defaults\nIPv6\nFilter networks in routing updates\nAccess-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 663
+            },
+            "node": 25
+          }
+        ],
+        "string": "no ipv6 distribute-list [ACCESSLIST6_NAME$name] <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "no_ripng_ipv6_distribute_list_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_ripng_ipv6_distribute_list_prefix",
+          "line": 591
+        },
+        "doc": "Negate a command or set its defaults\nIPv6\nFilter networks in routing updates\nSpecify a prefix list\nPrefix-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 664
+            },
+            "node": 25
+          }
+        ],
+        "string": "no ipv6 distribute-list prefix [PREFIXLIST6_NAME$name] <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "no_ripng_timers_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_ripng_timers",
+          "line": 443
+        },
+        "doc": "Negate a command or set its defaults\nRIPng timers setup\nBasic timer\nRouting table update timer value in second. Default is 30.\nRouting information timeout timer. Default is 180.\nGarbage collection timer. Default is 120.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 679
+            },
+            "node": 25
+          }
+        ],
+        "string": "no timers basic [(1-65535) (1-65535) (1-65535)]"
+      }
+    },
+    "no_router_rip_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "no_router_rip",
+          "line": 51
+        },
+        "doc": "Negate a command or set its defaults\nEnable a routing process\nRouting Information Protocol (RIP)\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1267
+            },
+            "node": 4
+          }
+        ],
+        "string": "no router rip [vrf NAME]"
+      }
+    },
+    "no_router_ripng_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "no_router_ripng",
+          "line": 51
+        },
+        "doc": "Negate a command or set its defaults\nEnable a routing process\nMake RIPng instance command\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 659
+            },
+            "node": 4
+          }
+        ],
+        "string": "no router ripng [vrf NAME]"
+      }
+    },
+    "no_set_src_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "no_set_src",
+          "line": 2617
+        },
+        "doc": "Negate a command or set its defaults\nSet values in destination routing protocol\nSource address for route\nIPv4 address\nIPv6 address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3021
+            },
+            "node": 7
+          }
+        ],
+        "string": "no set src [<A.B.C.D|X:X::X:X>]"
+      }
+    },
+    "rip_allow_ecmp_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_allow_ecmp",
+          "line": 94
+        },
+        "doc": "Allow Equal Cost MultiPath\nNumber of paths\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1274
+            },
+            "node": 24
+          }
+        ],
+        "string": "allow-ecmp [(1-16)]"
+      }
+    },
+    "rip_bfd_default_profile_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_bfd_default_profile",
+          "line": 637
+        },
+        "doc": "Bidirectional Forwarding Detection\nBFD default profile\nProfile name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1294
+            },
+            "node": 24
+          }
+        ],
+        "string": "bfd default-profile BFDPROF$profile"
+      }
+    },
+    "rip_default_information_originate_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_default_information_originate",
+          "line": 141
+        },
+        "doc": "Negate a command or set its defaults\nControl distribution of default route\nDistribute a default route\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1276
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] default-information originate"
+      }
+    },
+    "rip_default_metric_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_default_metric",
+          "line": 167
+        },
+        "doc": "Set a metric of redistribute routes\nDefault metric\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1277
+            },
+            "node": 24
+          }
+        ],
+        "string": "default-metric (1-16)"
+      }
+    },
+    "rip_distance_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_distance",
+          "line": 201
+        },
+        "doc": "Administrative distance\nDistance value\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1279
+            },
+            "node": 24
+          }
+        ],
+        "string": "distance (1-255)"
+      }
+    },
+    "rip_distance_source_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_distance_source",
+          "line": 238
+        },
+        "doc": "Negate a command or set its defaults\nAdministrative distance\nDistance value\nIP source prefix\nAccess list name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1281
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] distance (1-255) A.B.C.D/M$prefix [WORD$acl]"
+      }
+    },
+    "rip_distribute_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_distribute_list",
+          "line": 1128
+        },
+        "doc": "Filter networks in routing updates\nAccess-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1269
+            },
+            "node": 24
+          }
+        ],
+        "string": "distribute-list ACCESSLIST4_NAME$name <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "rip_distribute_list_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_distribute_list_prefix",
+          "line": 1147
+        },
+        "doc": "Filter networks in routing updates\nSpecify a prefix list\nPrefix-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1270
+            },
+            "node": 24
+          }
+        ],
+        "string": "distribute-list prefix PREFIXLIST4_NAME$name <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "rip_neighbor_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_neighbor",
+          "line": 275
+        },
+        "doc": "Negate a command or set its defaults\nSpecify a neighbor router\nNeighbor address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1282
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] neighbor A.B.C.D"
+      }
+    },
+    "rip_network_if_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_network_if",
+          "line": 328
+        },
+        "doc": "Negate a command or set its defaults\nEnable routing on an IP network\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1284
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] network WORD"
+      }
+    },
+    "rip_network_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_network_prefix",
+          "line": 302
+        },
+        "doc": "Negate a command or set its defaults\nEnable routing on an IP network\nIP prefix <network>/<length>, e.g., 35.0.0.0/8\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1283
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] network A.B.C.D/M"
+      }
+    },
+    "rip_offset_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_offset_list",
+          "line": 355
+        },
+        "doc": "Negate a command or set its defaults\nModify RIP metric\nAccess-list name\nFor incoming updates\nFor outgoing updates\nMetric value\nInterface to match\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1285
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] offset-list ACCESSLIST4_NAME$acl <in|out>$direction (0-16)$metric [IFNAME]"
+      }
+    },
+    "rip_passive_default_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_passive_default",
+          "line": 398
+        },
+        "doc": "Negate a command or set its defaults\nSuppress routing updates on an interface\ndefault for all interfaces\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1286
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] passive-interface default"
+      }
+    },
+    "rip_passive_interface_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_passive_interface",
+          "line": 424
+        },
+        "doc": "Negate a command or set its defaults\nSuppress routing updates on an interface\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1287
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] passive-interface IFNAME"
+      }
+    },
+    "rip_redistribute_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_redistribute",
+          "line": 471
+        },
+        "doc": "Negate a command or set its defaults\nRedistribute information from another routing protocol\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nOpen Shortest Path First (OSPFv2)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nEnhanced Interior Gateway Routing Protocol (EIGRP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nMetric\nMetric value\nRoute map reference\nPointer to route-map entries\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1288
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] redistribute <kernel|connected|local|static|ospf|isis|bgp|eigrp|table|vnc|babel|openfabric|table-direct>$protocol [{metric (0-16)|route-map RMAP_NAME$route_map}]"
+      }
+    },
+    "rip_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_route",
+          "line": 514
+        },
+        "doc": "Negate a command or set its defaults\nRIP static route configuration\nIP prefix <network>/<length>\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1289
+            },
+            "node": 24
+          }
+        ],
+        "string": "[no] route A.B.C.D/M"
+      }
+    },
+    "rip_timers_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_timers",
+          "line": 540
+        },
+        "doc": "Adjust routing timers\nBasic routing protocol update timers\nRouting table update timer value in second. Default is 30.\nRouting information timeout timer. Default is 180.\nGarbage collection timer. Default is 120.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1290
+            },
+            "node": 24
+          }
+        ],
+        "string": "timers basic (5-2147483647)$update (5-2147483647)$timeout (5-2147483647)$garbage"
+      }
+    },
+    "rip_version_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "rip_version",
+          "line": 588
+        },
+        "doc": "Set routing protocol version\nversion\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1292
+            },
+            "node": 24
+          }
+        ],
+        "string": "version (1-2)"
+      }
+    },
+    "ripng_aggregate_address_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_aggregate_address",
+          "line": 395
+        },
+        "doc": "Negate a command or set its defaults\nSet aggregate RIPng route announcement\nAggregate network\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 677
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] aggregate-address X:X::X:X/M"
+      }
+    },
+    "ripng_allow_ecmp_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_allow_ecmp",
+          "line": 94
+        },
+        "doc": "Allow Equal Cost MultiPath\nNumber of paths\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 666
+            },
+            "node": 25
+          }
+        ],
+        "string": "allow-ecmp [(1-16)]"
+      }
+    },
+    "ripng_default_information_originate_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_default_information_originate",
+          "line": 140
+        },
+        "doc": "Negate a command or set its defaults\nDefault route information\nDistribute default route\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 668
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] default-information originate"
+      }
+    },
+    "ripng_default_metric_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_default_metric",
+          "line": 166
+        },
+        "doc": "Set a metric of redistribute routes\nDefault metric\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 669
+            },
+            "node": 25
+          }
+        ],
+        "string": "default-metric (1-16)"
+      }
+    },
+    "ripng_ipv6_distribute_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_ipv6_distribute_list",
+          "line": 515
+        },
+        "doc": "IPv6\nFilter networks in routing updates\nAccess-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 661
+            },
+            "node": 25
+          }
+        ],
+        "string": "ipv6 distribute-list ACCESSLIST6_NAME$name <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "ripng_ipv6_distribute_list_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_ipv6_distribute_list_prefix",
+          "line": 535
+        },
+        "doc": "IPv6\nFilter networks in routing updates\nSpecify a prefix list\nPrefix-list name\nFilter incoming routing updates\nFilter outgoing routing updates\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 662
+            },
+            "node": 25
+          }
+        ],
+        "string": "ipv6 distribute-list prefix PREFIXLIST6_NAME$name <in|out>$dir [WORD$ifname]"
+      }
+    },
+    "ripng_network_if_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_network_if",
+          "line": 228
+        },
+        "doc": "Negate a command or set its defaults\nRIPng enable on specified interface or network.\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 672
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] network WORD"
+      }
+    },
+    "ripng_network_prefix_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_network_prefix",
+          "line": 201
+        },
+        "doc": "Negate a command or set its defaults\nRIPng enable on specified interface or network.\nIPv6 network\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 671
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] network X:X::X:X/M"
+      }
+    },
+    "ripng_offset_list_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_offset_list",
+          "line": 255
+        },
+        "doc": "Negate a command or set its defaults\nModify RIPng metric\nAccess-list name\nFor incoming updates\nFor outgoing updates\nMetric value\nInterface to match\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 673
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] offset-list ACCESSLIST6_NAME$acl <in|out>$direction (0-16)$metric [IFNAME]"
+      }
+    },
+    "ripng_passive_interface_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_passive_interface",
+          "line": 298
+        },
+        "doc": "Negate a command or set its defaults\nSuppress routing updates on an interface\nInterface name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 674
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] passive-interface IFNAME"
+      }
+    },
+    "ripng_redistribute_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_redistribute",
+          "line": 326
+        },
+        "doc": "Negate a command or set its defaults\nRedistribute information from another routing protocol\nKernel routes (not installed via the zebra RIB)\nConnected routes (directly attached subnet or host)\nLocal routes (directly attached host route)\nStatically configured routes\nOpen Shortest Path First (IPv6) (OSPFv3)\nIntermediate System to Intermediate System (IS-IS)\nBorder Gateway Protocol (BGP)\nNon-main Kernel Routing Table\nVirtual Network Control (VNC)\nBabel routing protocol (Babel)\nOpenFabric Routing Protocol\nNon-main Kernel Routing Table - Direct\nMetric\nMetric value\nRoute map reference\nPointer to route-map entries\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 675
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] redistribute <kernel|connected|local|static|ospf6|isis|bgp|table|vnc|babel|openfabric|table-direct>$protocol [{metric (0-16)|route-map RMAP_NAME$route_map}]"
+      }
+    },
+    "ripng_route_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_route",
+          "line": 369
+        },
+        "doc": "Negate a command or set its defaults\nStatic route setup\nSet static RIPng route announcement\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 676
+            },
+            "node": 25
+          }
+        ],
+        "string": "[no] route X:X::X:X/M"
+      }
+    },
+    "ripng_timers_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "ripng_timers",
+          "line": 424
+        },
+        "doc": "RIPng timers setup\nBasic timer\nRouting table update timer value in second. Default is 30.\nRouting information timeout timer. Default is 180.\nGarbage collection timer. Default is 120.\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 678
+            },
+            "node": 25
+          }
+        ],
+        "string": "timers basic (1-65535)$update (1-65535)$timeout (1-65535)$garbage"
+      }
+    },
+    "router_id_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_router_id",
+          "line": 1887
+        },
+        "doc": "Negate a command or set its defaults\nManually set the router-id\nIP address to use for router-id\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2971
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] router-id A.B.C.D$id vrf NAME"
+      }
+    },
+    "router_id_in_vrf_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "ip_router_id_in_vrf",
+          "line": 1935
+        },
+        "doc": "Negate a command or set its defaults\nManually set the router-id\nIP address to use for router-id\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2977
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2974
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] router-id ![A.B.C.D$id]"
+      }
+    },
+    "router_rip_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 9,
+        "attrs": [
+          "yang",
+          "nosh"
+        ],
+        "defun": {
+          "file": "ripd/rip_cli.c",
+          "func": "router_rip",
+          "line": 26
+        },
+        "doc": "Enable a routing process\nRouting Information Protocol (RIP)\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripd/rip_cli.c",
+              "func": "rip_cli_init",
+              "line": 1266
+            },
+            "node": 4
+          }
+        ],
+        "string": "router rip [vrf NAME]"
+      }
+    },
+    "router_ripng_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 9,
+        "attrs": [
+          "yang",
+          "nosh"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_cli.c",
+          "func": "router_ripng",
+          "line": 26
+        },
+        "doc": "Enable a routing process\nMake RIPng instance command\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_cli.c",
+              "func": "ripng_cli_init",
+              "line": 658
+            },
+            "node": 4
+          }
+        ],
+        "string": "router ripng [vrf NAME]"
+      }
+    },
+    "set_src_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "set_src",
+          "line": 2585
+        },
+        "doc": "Set values in destination routing protocol\nsrc address for route\nIPv4 src address\nIPv6 src address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3020
+            },
+            "node": 7
+          }
+        ],
+        "string": "set src <A.B.C.D$addrv4|X:X::X:X$addrv6>"
+      }
+    },
+    "shutdown_if_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "shutdown_if",
+          "line": 171
+        },
+        "doc": "Negate a command or set its defaults\nShutdown the selected interface\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2914
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] shutdown"
+      }
+    },
+    "vni_mapping_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "vni_mapping",
+          "line": 2343
+        },
+        "doc": "Negate a command or set its defaults\nVNI corresponding to tenant VRF\nVNI-ID\nprefix-routes-only\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2999
+            },
+            "node": 20
+          },
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2998
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] vni ![(1-16777215)[prefix-routes-only$filter]]"
+      }
+    },
+    "vrf_netns_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "vrf_netns",
+          "line": 2255
+        },
+        "doc": "Negate a command or set its defaults\nAttach VRF to a Namespace\nThe file name in /var/run/netns, or a full pathname\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 3002
+            },
+            "node": 20
+          }
+        ],
+        "string": "[no] netns ![NAME$netns_name]"
+      }
+    },
+    "zebra_evpn_es_bypass_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 3,
+        "attrs": [
+          "yang",
+          "hidden"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_evpn_es_bypass",
+          "line": 970
+        },
+        "doc": "Negate a command or set its defaults\nEVPN\nMultihoming\nSet bypass mode\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2943
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] evpn mh bypass"
+      }
+    },
+    "zebra_evpn_es_id_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_evpn_es_id",
+          "line": 1061
+        },
+        "doc": "Negate a command or set its defaults\nEVPN\nMultihoming\nEthernet segment identifier\nlocal discriminator\n10-byte ID - 00:AA:BB:CC:DD:EE:FF:GG:HH:II\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2940
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no$no] evpn mh es-id ![(1-16777215)$es_lid | NAME$esi_str]"
+      }
+    },
+    "zebra_evpn_es_pref_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_evpn_es_pref",
+          "line": 999
+        },
+        "doc": "Negate a command or set its defaults\nEVPN\nMultihoming\nPreference value used for DF election\nPreference\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2942
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no$no] evpn mh es-df-pref ![(1-65535)$df_pref]"
+      }
+    },
+    "zebra_evpn_es_sys_mac_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_evpn_es_sys_mac",
+          "line": 1028
+        },
+        "doc": "Negate a command or set its defaults\nEVPN\nMultihoming\nEthernet segment system MAC\nMAC address\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2941
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no$no] evpn mh es-sys-mac ![X:X:X:X:X:X$mac]"
+      }
+    },
+    "zebra_evpn_mh_uplink_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_evpn_mh_uplink",
+          "line": 1109
+        },
+        "doc": "Negate a command or set its defaults\nEVPN\nMultihoming\nUplink to the VxLAN core\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2944
+            },
+            "node": 21
+          }
+        ],
+        "string": "[no] evpn mh uplink"
+      }
+    },
+    "zebra_route_map_timer_cmd": {
+      "mgmtd/libmgmt_be_nb.la": {
+        "attr": 1,
+        "attrs": [
+          "yang"
+        ],
+        "defun": {
+          "file": "zebra/zebra_cli.c",
+          "func": "zebra_route_map_timer",
+          "line": 47
+        },
+        "doc": "Negate a command or set its defaults\nZebra information\nSet route-map parameters\nTime to wait before route-map updates are processed\n0 means route-map changes are run immediately instead of delaying\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "zebra/zebra_cli.c",
+              "func": "zebra_cli_init",
+              "line": 2988
+            },
+            "node": 4
+          }
+        ],
+        "string": "[no] zebra route-map delay-timer ![(0-600)$delay]"
+      }
+    }
+  },
+  "refs": {}
+}

@@ -1,0 +1,1191 @@
+{
+  "cli": {
+    "debug_ripng_events_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "debug_ripng_events",
+          "line": 49
+        },
+        "doc": "Debugging functions\nRIPng configuration\nDebug option set for ripng events\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 219
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 210
+            },
+            "node": 3
+          }
+        ],
+        "string": "debug ripng events"
+      }
+    },
+    "debug_ripng_packet_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "debug_ripng_packet",
+          "line": 60
+        },
+        "doc": "Debugging functions\nRIPng configuration\nDebug option set for ripng packet\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 220
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 211
+            },
+            "node": 3
+          }
+        ],
+        "string": "debug ripng packet"
+      }
+    },
+    "debug_ripng_packet_direct_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "debug_ripng_packet_direct",
+          "line": 73
+        },
+        "doc": "Debugging functions\nRIPng configuration\nDebug option set for ripng packet\nDebug option set for receive packet\nDebug option set for send packet\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 221
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 212
+            },
+            "node": 3
+          }
+        ],
+        "string": "debug ripng packet <recv|send>"
+      }
+    },
+    "debug_ripng_zebra_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "debug_ripng_zebra",
+          "line": 92
+        },
+        "doc": "Debugging functions\nRIPng configuration\nDebug option set for ripng and zebra communication\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 222
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 213
+            },
+            "node": 3
+          }
+        ],
+        "string": "debug ripng zebra"
+      }
+    },
+    "no_debug_ripng_events_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "no_debug_ripng_events",
+          "line": 103
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nRIPng configuration\nDebug option set for ripng events\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 223
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 214
+            },
+            "node": 3
+          }
+        ],
+        "string": "no debug ripng events"
+      }
+    },
+    "no_debug_ripng_packet_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "no_debug_ripng_packet",
+          "line": 115
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nRIPng configuration\nDebug option set for ripng packet\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 224
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 215
+            },
+            "node": 3
+          }
+        ],
+        "string": "no debug ripng packet"
+      }
+    },
+    "no_debug_ripng_packet_direct_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "no_debug_ripng_packet_direct",
+          "line": 127
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nRIPng configuration\nDebug option set for ripng packet\nDebug option set for receive packet\nDebug option set for send packet\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 225
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 216
+            },
+            "node": 3
+          }
+        ],
+        "string": "no debug ripng packet <recv|send>"
+      }
+    },
+    "no_debug_ripng_zebra_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "no_debug_ripng_zebra",
+          "line": 152
+        },
+        "doc": "Negate a command or set its defaults\nDebugging functions\nRIPng configuration\nDebug option set for ripng and zebra communication\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 226
+            },
+            "node": 4
+          },
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 217
+            },
+            "node": 3
+          }
+        ],
+        "string": "no debug ripng zebra"
+      }
+    },
+    "show_debugging_ripng_cmd": {
+      "ripngd/ripngd": {
+        "attr": 8,
+        "attrs": [
+          "nosh"
+        ],
+        "defun": {
+          "file": "ripngd/ripng_debug.c",
+          "func": "show_debugging_ripng",
+          "line": 16
+        },
+        "doc": "Show running system information\nDebugging functions\nRIPng configuration\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripng_debug.c",
+              "func": "ripng_debug_init",
+              "line": 208
+            },
+            "node": 3
+          }
+        ],
+        "string": "show debugging [ripng]"
+      }
+    },
+    "show_ipv6_ripng_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripngd.c",
+          "func": "show_ipv6_ripng",
+          "line": 2038
+        },
+        "doc": "Show running system information\nIPv6 information\nShow RIPng routes\nSpecify the VRF\nThe VRF name\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripngd.c",
+              "func": "ripng_init",
+              "line": 2652
+            },
+            "node": 1
+          }
+        ],
+        "string": "show ipv6 ripng [vrf NAME]"
+      }
+    },
+    "show_ipv6_ripng_status_cmd": {
+      "ripngd/ripngd": {
+        "defun": {
+          "file": "ripngd/ripngd.c",
+          "func": "show_ipv6_ripng_status",
+          "line": 2158
+        },
+        "doc": "Show running system information\nIPv6 information\nShow RIPng routes\nSpecify the VRF\nThe VRF name\nIPv6 routing protocol process parameters and statistics\n",
+        "nodes": [
+          {
+            "install": {
+              "file": "ripngd/ripngd.c",
+              "func": "ripng_init",
+              "line": 2653
+            },
+            "node": 1
+          }
+        ],
+        "string": "show ipv6 ripng [vrf NAME] status"
+      }
+    }
+  },
+  "refs": {
+    "G18ZK-ERR26": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng %s leave from all-rip-routers multicast group",
+        "func": "ripng_multicast_leave",
+        "line": 117,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "G1Q6M-Q7SDK": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng send request to %s",
+        "func": "ripng_request",
+        "line": 1934,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "GX0QJ-4PZTX": [
+      {
+        "args": "sndrcv, command_str, packet->version, size",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%s %s version %d packet size %d",
+        "func": "ripng_packet_dump",
+        "line": 319,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H2MDM-8S56B": [
+      {
+        "args": "(cmd == ZEBRA_ROUTE_ADD) ? \"Install into zebra\" : \"Delete from zebra\", rp",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_zebra.c",
+        "fmtstring": "%s: %pRN",
+        "func": "ripng_zebra_ipv6_send",
+        "line": 80,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "H5MBJ-W4ZSC": [
+      {
+        "args": "p, inout",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%pFX filtered by distribute %s",
+        "func": "ripng_filter",
+        "line": 707,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "p, inout",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%pFX filtered by distribute %s",
+        "func": "ripng_filter",
+        "line": 681,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HBXA3-WCZ6J": [
+      {
+        "args": "len, &from.sin6_addr, ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng invalid packet size %d from %pI6 (VRF %s)",
+        "func": "ripng_read",
+        "line": 1377,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HBY1C-E16HQ": [
+      {
+        "args": "safe_strerror(errno)",
+        "binary": "ripngd/ripngd",
+        "ec": 100663299,
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Cannot create UDP socket: %s",
+        "func": "ripng_make_socket",
+        "line": 114,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "HCD5G-C6Z07": [
+      {
+        "args": "&from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet comes from my own link local address %pI6",
+        "func": "ripng_response_process",
+        "line": 1167,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "HF070-58CKY": [
+      {
+        "args": "&from.sin6_addr, __bswap_16 (from.sin6_port), ifp ? ifp->name : \"unknown\", ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet received from %pI6 port %d on %s (VRF %s)",
+        "func": "ripng_read",
+        "line": 1388,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HHYK0-KNPEN": [
+      {
+        "args": "p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng %pFX is filtered by route-map out",
+        "func": "ripng_output_process",
+        "line": 1794,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng %pFX is filtered by route-map out",
+        "func": "ripng_output_process",
+        "line": 1683,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HJMK8-9F5BP": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "turn off %s",
+        "func": "ripng_if_down",
+        "line": 173,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "HVHX6-5MXS5": [
+      {
+        "args": "p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng %pFX is filtered by route-map",
+        "func": "ripng_output_process",
+        "line": 1699,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JBYND-1BV88": [
+      {
+        "args": "&rte->addr, rte->prefixlen, &from->sin6_addr, ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Invalid prefix length %pI6/%d from %pI6%%%s",
+        "func": "ripng_response_process",
+        "line": 1235,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "JGJQA-CXEWY": [
+      {
+        "args": "p, ifindex2ifname( rinfo->ifindex, ripng->vrf->vrf_id)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Poisone %pFX on the interface %s [withdraw]",
+        "func": "ripng_redistribute_withdraw",
+        "line": 1118,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JX6NP-PSMTG": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_zebra.c",
+        "fmtstring": "%s: register VRF %s(%u) to zebra",
+        "func": "ripng_zebra_vrf_register",
+        "line": 199,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "JYWNP-Q0HN7": [
+      {
+        "args": "hoplimit, &from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet comes with non 255 hop count %d from %pI6",
+        "func": "ripng_response_process",
+        "line": 1179,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K2R9C-TF8WX": [
+      {
+        "args": "&rte->addr, rte->prefixlen, rte->metric",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Destination prefix is a multicast address %pI6/%d [%d]",
+        "func": "ripng_response_process",
+        "line": 1211,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K80DN-V28KC": [
+      {
+        "args": "&rte->addr, &from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng nexthop RTE with non link-local address %pI6 from %pI6",
+        "func": "ripng_nexthop_rte",
+        "line": 384,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "K8XJX-6JX1P": [
+      {
+        "args": "",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Interface index returned by IPV6_PKTINFO is zero",
+        "func": "ripng_recv_packet",
+        "line": 282,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KE1NN-EJCF0": [
+      {
+        "args": "safe_strerror(save_errno)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "can't setsockopt IPV6_JOIN_GROUP: %s",
+        "func": "ripng_multicast_join",
+        "line": 85,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KMEXA-TE3X9": [
+      {
+        "args": "ripng->vrf_name, safe_strerror((*__errno_location ()))",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng recvfrom failed (VRF %s): %s.",
+        "func": "ripng_read",
+        "line": 1369,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "KW6BG-PT818": [
+      {
+        "args": "p, nexthop, ifindex2ifname(ifindex, ripng->vrf->vrf_id)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Redistribute new prefix %pFX with nexthop %pI6 on the interface %s",
+        "func": "ripng_redistribute_add",
+        "line": 1031,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "KZF7B-Q4V4X": [
+      {
+        "args": "(route_tag_t)__bswap_16 (rte->tag), &from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng nexthop RTE with non zero tag value %u from %pI6",
+        "func": "ripng_nexthop_rte",
+        "line": 351,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MCP44-N9ZRP": [
+      {
+        "args": "(cmd == ZEBRA_ROUTE_ADD) ? \"Install into zebra\" : \"Delete from zebra\", rp, count",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_zebra.c",
+        "fmtstring": "%s: %pRN nexthops %d",
+        "func": "ripng_zebra_ipv6_send",
+        "line": 74,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MFZ78-H8DJK": [
+      {
+        "args": "__func__, metric",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_routemap.c",
+        "fmtstring": "%s: Metric specified: %ld is being converted into METRIC_INFINITY",
+        "func": "route_set_metric_compile",
+        "line": 280,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "MN22K-JQJSS": [
+      {
+        "args": "__bswap_16 (from->sin6_port), &from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet comes from non RIPng port %d from %pI6",
+        "func": "ripng_response_process",
+        "line": 1145,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "MT8V4-TYCKZ": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "  send interface %s",
+        "func": "ripng_send_packet",
+        "line": 181,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "MZ1MD-7KHVJ": [
+      {
+        "args": "&rte->addr, rte->prefixlen",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "  nexthop %pI6/%d",
+        "func": "ripng_packet_dump",
+        "line": 327,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "N9T15-7RKYF": [
+      {
+        "args": "rte->prefixlen, &from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng nexthop RTE with non zero prefixlen value %d from %pI6",
+        "func": "ripng_nexthop_rte",
+        "line": 357,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "NF770-F9RZW": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng update routes on interface %s",
+        "func": "ripng_output_process",
+        "line": 1605,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P0GT0-02Y3D": [
+      {
+        "args": "rte->metric, &from->sin6_addr, ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Invalid metric %d from %pI6%%%s",
+        "func": "ripng_response_process",
+        "line": 1244,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "P13Y2-T8GZZ": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng %s join to all-rip-routers multicast group",
+        "func": "ripng_multicast_join",
+        "line": 89,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P61P8-0B8B6": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%s: VRF created: %s(%u)",
+        "func": "ripng_vrf_new",
+        "line": 2580,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P68H1-J1YWN": [
+      {
+        "args": "safe_strerror((*__errno_location ()))",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "can't setsockopt IPV6_LEAVE_GROUP: %s",
+        "func": "ripng_multicast_leave",
+        "line": 113,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "P8EQ2-SA0ZA": [
+      {
+        "args": "p, ifindex2ifname( ifindex, ripng->vrf->vrf_id)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Poisone %pFX on the interface %s with an infinity metric [delete]",
+        "func": "ripng_redistribute_delete",
+        "line": 1075,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "P9C4H-FC8B8": [
+      {
+        "args": "safe_strerror((*__errno_location ()))",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Can't bind ripng socket: %s.",
+        "func": "ripng_make_socket",
+        "line": 152,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "P9MRZ-AG6RD": [
+      {
+        "args": "",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_main.c",
+        "fmtstring": "Terminating on signal",
+        "func": "sigint",
+        "line": 74,
+        "priority": 5,
+        "type": "logmsg"
+      }
+    ],
+    "PBEXZ-TDFMT": [
+      {
+        "args": "p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng connected address %pFX delete",
+        "func": "ripng_interface_address_delete",
+        "line": 390,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "PCC7F-AGZ7H": [
+      {
+        "args": "&rte->addr, rte->prefixlen, rte->metric",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Destination prefix is a loopback address %pI6/%d [%d]",
+        "func": "ripng_response_process",
+        "line": 1225,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "PFFNW-H080S": [
+      {
+        "args": "",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng update timer expired!",
+        "func": "ripng_update",
+        "line": 1458,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Q2C42-B1WD6": [
+      {
+        "args": "packet->command, ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Invalid RIPng command %d (VRF %s)",
+        "func": "ripng_read",
+        "line": 1423,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "QJDFX-QM7XS": [
+      {
+        "args": "ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_nb_rpcs.c",
+        "fmtstring": "Clearing all RIPng routes (VRF %s)",
+        "func": "clear_ripng_route",
+        "line": 33,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "QXSA0-MYT49": [
+      {
+        "args": "ifp->name, ifp->vrf->name, ifp->vrf->vrf_id, ifp->ifindex, (unsigned long long)ifp->flags, ifp->metric, ifp->mtu6",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "interface delete %s vrf %s(%u) index %d flags %#llx metric %d mtu %d",
+        "func": "ripng_ifp_destroy",
+        "line": 257,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RA884-ER1ZD": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%s: VRF %s(%u) enabled",
+        "func": "ripng_vrf_enable",
+        "line": 2605,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RB5YA-2EM45": [
+      {
+        "args": "&to->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng update routes to neighbor %pI6",
+        "func": "ripng_output_process",
+        "line": 1602,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "RMVT3-E8CRC": [
+      {
+        "args": "ifp->name, safe_strerror(errno)",
+        "binary": "ripngd/ripngd",
+        "ec": 100663299,
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng send fail on %s: %s",
+        "func": "ripng_send_packet",
+        "line": 230,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "RNQ8T-04XMH": [
+      {
+        "args": "p, inout",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%pFX filtered by prefix-list %s",
+        "func": "ripng_filter",
+        "line": 722,
+        "priority": 7,
+        "type": "logmsg"
+      },
+      {
+        "args": "p, inout",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%pFX filtered by prefix-list %s",
+        "func": "ripng_filter",
+        "line": 690,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "SMNT9-XGWGK": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "Interface %s does not have any link-local address",
+        "func": "ripng_enable_apply",
+        "line": 664,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "SZDKP-TFYTA": [
+      {
+        "args": "&p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng %pFX is filtered by route-map in",
+        "func": "ripng_route_process",
+        "line": 789,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "TAVPW-D39XC": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "ec": 100663299,
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "multicast join failed, interface %s not running",
+        "func": "ripng_interface_wakeup",
+        "line": 574,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "TBYCG-8XC0Y": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng INTERFACE ON %s",
+        "func": "ripng_enable_apply",
+        "line": 670,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "TK411-9EHJC": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%s: VRF deleted: %s(%u)",
+        "func": "ripng_vrf_delete",
+        "line": 2589,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "V86R5-N8C2G": [
+      {
+        "args": "ifp->name, ifp->vrf->name, ifp->vrf->vrf_id, ifp->ifindex, (unsigned long long)ifp->flags, ifp->metric, ifp->mtu6",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "interface down %s vrf %s(%u) index %d flags %#llx metric %d mtu %d",
+        "func": "ripng_ifp_down",
+        "line": 216,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VHGVG-DBM6B": [
+      {
+        "args": "&rte->addr, rte->prefixlen, rte->metric",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Destination prefix is a link-local address %pI6/%d [%d]",
+        "func": "ripng_response_process",
+        "line": 1218,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VMYZQ-AVW6Y": [
+      {
+        "args": "ifp->name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "ripng join on %s EADDRINUSE (ignoring)",
+        "func": "ripng_multicast_join",
+        "line": 79,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "VQ7QH-533H3": [
+      {
+        "args": "ifp->name, ifp->vrf->name, ifp->vrf->vrf_id, ifp->ifindex, (unsigned long long)ifp->flags, ifp->metric, ifp->mtu6",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "interface up %s vrf %s(%u) index %d flags %llx metric %d mtu %d",
+        "func": "ripng_ifp_up",
+        "line": 189,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "VZYNC-T8V42": [
+      {
+        "args": "ifindex, ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet comes from unknown interface %d (VRF %s)",
+        "func": "ripng_read",
+        "line": 1399,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "W8DPX-675F3": [
+      {
+        "args": "&rte->addr, rte->prefixlen, rte->metric, (route_tag_t)__bswap_16 (rte->tag)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "  %pI6/%d metric %d tag %u",
+        "func": "ripng_packet_dump",
+        "line": 330,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WBDRJ-GNQGS": [
+      {
+        "args": "&rte->addr, (route_tag_t)__bswap_16 (rte->tag), rte->prefixlen",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng nexthop RTE address %pI6 tag %u prefixlen %d",
+        "func": "ripng_nexthop_rte",
+        "line": 342,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "WQSVJ-HBV0P": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "%s: VRF %s(%u) disabled",
+        "func": "ripng_vrf_disable",
+        "line": 2627,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X3G32-HWBY2": [
+      {
+        "args": "",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng triggered update!",
+        "func": "ripng_triggered_update",
+        "line": 1522,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X4SVF-CNB2Y": [
+      {
+        "args": "__func__, vrf->name, vrf->vrf_id",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_zebra.c",
+        "fmtstring": "%s: deregister VRF %s(%u) from zebra.",
+        "func": "ripng_zebra_vrf_deregister",
+        "line": 211,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "X5ZZM-7N85B": [
+      {
+        "args": "ifp->name, &to->sin6_addr, safe_strerror(errno)",
+        "binary": "ripngd/ripngd",
+        "ec": 100663299,
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng send fail on %s to %pI6: %s",
+        "func": "ripng_send_packet",
+        "line": 225,
+        "priority": 3,
+        "type": "logmsg"
+      }
+    ],
+    "YCY4A-HWHMZ": [
+      {
+        "args": "p, ifindex2ifname(ifindex, ripng->vrf->vrf_id)",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "Redistribute new prefix %pFX on the interface %s",
+        "func": "ripng_redistribute_add",
+        "line": 1027,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "YH89Z-KZV7V": [
+      {
+        "args": "&to->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "send to %pI6",
+        "func": "ripng_send_packet",
+        "line": 180,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Z62MX-38CXG": [
+      {
+        "args": "p",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng connected address %pFX add",
+        "func": "ripng_interface_address_add",
+        "line": 329,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "Z7TXW-G9SFY": [
+      {
+        "args": "packet->version, ripng->version, ripng->vrf_name",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet version %d doesn't fit to my version %d (VRF %s)",
+        "func": "ripng_read",
+        "line": 1407,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ],
+    "Z7ZPQ-3PV7Z": [
+      {
+        "args": "",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_main.c",
+        "fmtstring": "SIGHUP received",
+        "func": "sighup",
+        "line": 63,
+        "priority": 6,
+        "type": "logmsg"
+      }
+    ],
+    "ZAHHJ-056CV": [
+      {
+        "args": "bufsize",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "  send packet size %d",
+        "func": "ripng_send_packet",
+        "line": 182,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZQY9J-XT6Y0": [
+      {
+        "args": "ifp->name, ifp->vrf->name, ifp->vrf->vrf_id, ifp->ifindex, (unsigned long long)ifp->flags, ifp->metric, ifp->mtu6",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripng_interface.c",
+        "fmtstring": "RIPng interface add %s vrf %s(%u) index %d flags %#llx metric %d mtu %d",
+        "func": "ripng_ifp_create",
+        "line": 231,
+        "priority": 7,
+        "type": "logmsg"
+      }
+    ],
+    "ZY7HJ-0FGYH": [
+      {
+        "args": "&from->sin6_addr",
+        "binary": "ripngd/ripngd",
+        "file": "ripngd/ripngd.c",
+        "fmtstring": "RIPng packet comes from non link local address %pI6",
+        "func": "ripng_response_process",
+        "line": 1155,
+        "priority": 4,
+        "type": "logmsg"
+      }
+    ]
+  }
+}
