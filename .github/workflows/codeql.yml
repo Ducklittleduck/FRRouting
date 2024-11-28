@@ -33,7 +33,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install libyang (latest version) from source
+    - name: Install libyang (latest stable version) from source
       run: |
         sudo apt-get update
         sudo apt-get install -y \
@@ -43,12 +43,12 @@ jobs:
           git \
           libssl-dev
 
-        # Clone the latest version of libyang from GitHub
+        # Clone libyang repository from GitHub
         git clone https://github.com/CESNET/libyang.git /tmp/libyang
         cd /tmp/libyang
         
-        # Checkout the latest stable release version (you can specify the version you want here)
-        git checkout v2.2.0  # Change this to your desired version
+        # Checkout the latest stable release version (replace with valid tag, e.g., v2.1.130)
+        git checkout v2.1.130  # Replace with a valid version tag, or use 'main' for the latest code
 
         mkdir build
         cd build  # Enter build directory
