@@ -45,12 +45,12 @@ jobs:
 
         # Clone libyang repository from GitHub and checkout the required version
         git clone --branch v2.1.128 https://github.com/CESNET/libyang.git /tmp/libyang
-        cd /tmp/libyang
+        mkdir /tmp/libyang/build
+        cd /tmp/libyang/build  # 进入独立的构建目录
 
         # Build and install libyang
-        cmake .
+        cmake ..  # 在构建目录中运行 CMake
         sudo make install
-
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
