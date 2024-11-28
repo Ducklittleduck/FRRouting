@@ -33,24 +33,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install libyang 2.1.128 from source
+    - name: Install libyang 
       run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          build-essential \
-          pkg-config \
-          cmake \
-          git \
-          libssl-dev
-
-        # Clone libyang repository from GitHub and checkout the required version
-        git clone --branch v2.1.128 --single-branch --recurse-submodules https://github.com/CESNET/libyang.git /tmp/libyang
-        mkdir /tmp/libyang/build
-        cd /tmp/libyang/build  # 进入独立的构建目录
-
-        # Build and install libyang
-        cmake ..  # 在构建目录中运行 CMake
-        sudo make install
+        sudo apt update
+        sudo apt install libyang-dev
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
