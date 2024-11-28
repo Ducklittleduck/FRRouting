@@ -33,7 +33,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install libyang 2.1.128 from source
+    - name: Install libyang (latest version) from source
       run: |
         sudo apt-get update
         sudo apt-get install -y \
@@ -43,18 +43,23 @@ jobs:
           git \
           libssl-dev
 
-        # Clone libyang repository from GitHub and checkout the required version
-        git clone --branch v2.1.128 https://github.com/CESNET/libyang.git /tmp/libyang
-        mkdir /tmp/libyang/build
-        cd /tmp/libyang/build  # 进入独立的构建目录
+        # Clone the latest version of libyang from GitHub
+        git clone https://github.com/CESNET/libyang.git /tmp/libyang
+        cd /tmp/libyang
+        
+        # Checkout the latest stable release version (you can specify the version you want here)
+        git checkout v2.2.0  # Change this to your desired version
+
+        mkdir build
+        cd build  # Enter build directory
 
         # Build and install libyang
-        cmake ..  # 在构建目录中运行 CMake
+        cmake ..  # Run CMake in the build directory
         sudo make install
 
         # Ensure libyang libraries are found
-        sudo ldconfig  # 更新动态链接器缓存
-        
+        sudo ldconfig  # Update dynamic linker cache
+
         # Set environment variables for pkg-config and library path
         echo "/usr/local/lib" | sudo tee -a /etc/ld.so.conf.d/libyang.conf
         sudo ldconfig
