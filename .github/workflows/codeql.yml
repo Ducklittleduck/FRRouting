@@ -52,6 +52,13 @@ jobs:
         cmake ..  # 在构建目录中运行 CMake
         sudo make install
 
+        # Ensure libyang libraries are found
+        sudo ldconfig  # 更新动态链接器缓存
+        
+        # Set environment variables for pkg-config and library path
+        echo "/usr/local/lib" | sudo tee -a /etc/ld.so.conf.d/libyang.conf
+        sudo ldconfig
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
