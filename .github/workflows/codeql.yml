@@ -74,6 +74,10 @@ jobs:
         sudo make
         sudo make install
 
+        # Set up libyang library path (if needed)
+        echo "/usr/local/lib" | sudo tee -a /etc/ld.so.conf.d/libyang.conf
+        sudo ldconfig
+
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
