@@ -33,54 +33,53 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install the latest version of libyang from source
+    - name: Install dependencies and libyang from source
       run: |
+        # Update and install basic dependencies
         sudo apt-get update
         sudo apt-get install -y \
           build-essential \
           pkg-config \
           cmake \
           git \
-          libssl-dev
-
-        sudo apt-get install libpcre3-dev libxml2-dev
-        sudo apt-get install libcjson-dev
-        sudo apt-get install libyang-dev
-        sudo apt-get install libboost-all-dev
-        sudo apt-get install libprotobuf-dev
-        sudo apt-get install libcurl4-openssl-dev
-        sudo apt-get install libsodium-dev
-        sudo apt-get install pkg-config
-        sudo apt-get install libgnutls28-dev
-        sudo apt-get install libyaml-dev
-        sudo apt-get install libkrb5-dev
-        sudo apt-get install libsqlite3-dev
-        sudo apt-get install zlib1g-dev
+          libssl-dev \
+          libpcre3-dev \
+          libxml2-dev \
+          libcjson-dev \
+          libboost-all-dev \
+          libprotobuf-dev \
+          libcurl4-openssl-dev \
+          libsodium-dev \
+          libgnutls28-dev \
+          libyaml-dev \
+          libkrb5-dev \
+          libsqlite3-dev \
+          zlib1g-dev
 
         # Clone the latest libyang repository from GitHub
         git clone --single-branch --recurse-submodules https://github.com/CESNET/libyang.git /tmp/libyang
         cd /tmp/libyang
 
-        # Checkout the latest release tag (or master for latest development)
+        # Checkout the latest stable release (or master for latest development)
         git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
         # Create a build directory and build libyang
         mkdir build
         cd build
-        cmake ..
+
+        # Ensure to enable necessary features during CMake configuration
+        cmake -DENABLE_XPATH=ON -DCMAKE_BUILD_TYPE=Release ..
+
+        # Build and install libyang
+        sudo make
         sudo make install
 
-    # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
 
-    # If the analyze step fails for one of the languages you are analyzing with
-    # "We were unable to automatically build your code", modify the matrix above
-    # to set the build mode to "manual" for that language. Then modify this step
-    # to build your code.
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
